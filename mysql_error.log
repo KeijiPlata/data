@@ -436,3 +436,20 @@ Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2023-01-09 12:32:37 64 [ERROR] InnoDB: Page [page id: space=0, page number=338] log sequence number 1627961 is in the future! Current system log sequence number 364637.
 2023-01-09 12:32:37 64 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
 2023-01-09 12:32:37 65 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:43:37 67 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:43:37 69 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:43:37 71 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:43:49 73 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:43:49 75 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:43:57 77 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:43:57 79 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:43:57 81 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:44:48 83 [ERROR] InnoDB: Page [page id: space=0, page number=339] log sequence number 1628005 is in the future! Current system log sequence number 365095.
+2023-01-09 12:44:48 83 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-09 12:44:48 0 [ERROR] InnoDB: Page [page id: space=0, page number=340] log sequence number 1628049 is in the future! Current system log sequence number 365339.
+2023-01-09 12:44:48 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-09 12:44:48 83 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:44:48 85 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:44:48 87 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:44:50 91 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-09 12:44:50 93 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
