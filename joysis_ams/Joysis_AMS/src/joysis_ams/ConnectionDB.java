@@ -15,13 +15,9 @@ public class ConnectionDB {
             ps.setString(2, password);
             ResultSet rslt = ps.executeQuery();
             if(rslt.next()){
-              String dbuname = rslt.getString("Username");
-              String dbpassword = rslt.getString("Password");
-              
-              if(username.matches(dbuname) && password.matches(dbpassword)){
-                 JOptionPane.showMessageDialog(null, "ADMIN DETECTED \n"
+                JOptionPane.showMessageDialog(null, "ADMIN DETECTED \n"
                                 + "ACCESS GRANTED!");
-              }
+              
             } else {
                    JOptionPane.showMessageDialog(null, "Pakyu mali input \n"
                                 + "ACCESS NOT GRANTED!");
