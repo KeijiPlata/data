@@ -108,14 +108,19 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
+
+        // creating the object
+        ConnectionDB cdb = new ConnectionDB();
         String username = jTextField2.getText();
-        String password = jPasswordField1.getPassword().toString();
+        String password = jPasswordField1.getText();
+        
         
         // Validation if ever user will login with empty text field
         if(username.isEmpty() || password.isEmpty()){
             JOptionPane.showMessageDialog(this, "Username and Password should not be empty.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            cdb.connection(username, password);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
