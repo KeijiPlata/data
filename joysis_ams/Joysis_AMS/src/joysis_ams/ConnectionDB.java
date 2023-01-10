@@ -4,8 +4,6 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 
 public class ConnectionDB {
-    String dbuname = null;
-    String dbpassword = null;
     public void connection(String username, String password){
         try{
             String db = "jdbc:mysql://localhost:3306/joysis_ams";
@@ -24,11 +22,10 @@ public class ConnectionDB {
                  JOptionPane.showMessageDialog(null, "ADMIN DETECTED \n"
                                 + "ACCESS GRANTED!");
               }
-              else{
+            } else {
                    JOptionPane.showMessageDialog(null, "Pakyu mali input \n"
                                 + "ACCESS NOT GRANTED!");
               }
-            }
         }
         catch(Exception a){
             JOptionPane.showMessageDialog(null, a);
