@@ -338,3 +338,283 @@ Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2023-01-09 12:43:45 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool
 2023-01-09 12:43:45 0 [Note] Plugin 'FEEDBACK' is disabled.
 2023-01-09 12:43:45 0 [Note] Server socket created on IP: '::'.
+2023-01-10 11:11:44 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-01-10 11:11:44 0 [Note] InnoDB: Uses event mutexes
+2023-01-10 11:11:44 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+2023-01-10 11:11:44 0 [Note] InnoDB: Number of pools: 1
+2023-01-10 11:11:44 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2023-01-10 11:11:44 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2023-01-10 11:11:44 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-01-10 11:11:44 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=366953
+2023-01-10 11:11:44 0 [Warning] InnoDB: Ignoring a doublewrite copy of page [page id: space=0, page number=205] with future log sequence number 1627741
+2023-01-10 11:11:44 0 [Warning] InnoDB: Ignoring a doublewrite copy of page [page id: space=9, page number=3] with future log sequence number 1627761
+2023-01-10 11:11:44 0 [Warning] InnoDB: Ignoring a doublewrite copy of page [page id: space=0, page number=342] with future log sequence number 1627741
+2023-01-10 11:11:44 0 [Warning] InnoDB: Ignoring a doublewrite copy of page [page id: space=0, page number=203] with future log sequence number 1626362
+2023-01-10 11:11:44 0 [Warning] InnoDB: Ignoring a doublewrite copy of page [page id: space=2, page number=4] with future log sequence number 1626726
+2023-01-10 11:11:44 0 [Warning] InnoDB: Ignoring a doublewrite copy of page [page id: space=0, page number=340] with future log sequence number 1626362
+2023-01-10 11:11:44 0 [Warning] InnoDB: Ignoring a doublewrite copy of page [page id: space=0, page number=202] with future log sequence number 1625647
+2023-01-10 11:11:44 0 [Warning] InnoDB: Ignoring a doublewrite copy of page [page id: space=1, page number=3] with future log sequence number 1626666
+2023-01-10 11:11:44 0 [ERROR] InnoDB: Page [page id: space=0, page number=11] log sequence number 1626590 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:44 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=202] log sequence number 1628005 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=339] log sequence number 1628005 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=203] log sequence number 1628049 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=340] log sequence number 1628049 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=205] log sequence number 1628093 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=342] log sequence number 1628093 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=8] log sequence number 1626544 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=10] log sequence number 1626646 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=12] log sequence number 1626403 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=307] log sequence number 1626383 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=308] log sequence number 1626464 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try1\trial1tb.ibd' OS error: 203
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-10 11:11:45 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try1`.`trial1tb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-10 11:11:45 0 [Warning] InnoDB: Ignoring tablespace for `try1`.`trial1tb` because it could not be opened.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\loginstudent.ibd' OS error: 203
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-10 11:11:45 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`loginstudent``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-10 11:11:45 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`loginstudent` because it could not be opened.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\personalinfo.ibd' OS error: 203
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-10 11:11:45 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`personalinfo``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-10 11:11:45 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`personalinfo` because it could not be opened.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\trydb.ibd' OS error: 203
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-10 11:11:45 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`trydb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-10 11:11:45 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`trydb` because it could not be opened.
+2023-01-10 11:11:45 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2023-01-10 11:11:45 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-01-10 11:11:45 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-01-10 11:11:45 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2023-01-10 11:11:45 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.
+2023-01-10 11:11:45 0 [Note] InnoDB: Waiting for purge to start
+2023-01-10 11:11:45 0 [Note] InnoDB: 10.4.27 started; log sequence number 366962; transaction id 605
+2023-01-10 11:11:45 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool
+2023-01-10 11:11:45 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Page [page id: space=0, page number=9] log sequence number 1623811 is in the future! Current system log sequence number 366971.
+2023-01-10 11:11:45 0 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 11:11:45 0 [Note] InnoDB: Buffer pool(s) load completed at 230110 11:11:45
+2023-01-10 11:11:45 0 [Note] Server socket created on IP: '::'.
+2023-01-10 11:11:45 0 [Note] Reading of all Master_info entries succeeded
+2023-01-10 11:11:45 0 [Note] Added new Master_info '' to hash table
+2023-01-10 11:11:45 0 [Note] mysql\bin\mysqld: ready for connections.
+Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2023-01-10 11:13:02 11 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 11:13:07 13 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 11:13:07 15 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 11:13:07 17 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 11:13:10 23 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 11:37:02 25 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 11:55:51 27 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 12:09:34 29 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 12:23:06 31 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 12:36:21 33 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 12:49:23 35 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 13:02:12 37 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 13:14:49 39 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 13:27:13 41 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 13:39:25 43 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 13:51:24 45 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 14:03:11 47 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 14:14:47 49 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 14:26:11 51 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 14:37:24 53 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 14:48:25 55 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 14:59:15 57 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 15:09:55 59 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 15:20:24 61 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 15:30:42 63 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 15:40:50 65 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 15:50:48 67 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 16:00:36 69 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 16:10:14 71 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 16:19:43 73 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 16:29:02 4 [ERROR] InnoDB: Page [page id: space=0, page number=202] log sequence number 1628005 is in the future! Current system log sequence number 367341.
+2023-01-10 16:29:02 4 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 16:29:02 4 [ERROR] InnoDB: Page [page id: space=0, page number=203] log sequence number 1628049 is in the future! Current system log sequence number 367341.
+2023-01-10 16:29:02 4 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 16:29:02 4 [ERROR] InnoDB: Page [page id: space=0, page number=205] log sequence number 1628093 is in the future! Current system log sequence number 367341.
+2023-01-10 16:29:02 4 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 16:29:02 75 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 16:38:12 77 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 16:47:13 79 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 16:56:05 81 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 17:04:48 83 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 17:13:22 85 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 17:21:47 87 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 17:30:04 89 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 17:38:13 91 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 17:46:14 93 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 17:54:07 95 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:01:52 97 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:21 99 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:29 101 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:29 103 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:29 105 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:32 111 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:32 113 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Page [page id: space=0, page number=8] log sequence number 1626544 is in the future! Current system log sequence number 367595.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Page [page id: space=31, page number=0] log sequence number 1625283 is in the future! Current system log sequence number 367595.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Page [page id: space=0, page number=10] log sequence number 1626646 is in the future! Current system log sequence number 367595.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Page [page id: space=0, page number=11] log sequence number 1626590 is in the future! Current system log sequence number 367595.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Page [page id: space=0, page number=12] log sequence number 1626403 is in the future! Current system log sequence number 367595.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Page [page id: space=31, page number=3] log sequence number 1625283 is in the future! Current system log sequence number 367595.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Page [page id: space=31, page number=1] log sequence number 1623585 is in the future! Current system log sequence number 367595.
+2023-01-10 18:04:33 115 [ERROR] InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to https://mariadb.com/kb/en/library/innodb-recovery-modes/ for information about forcing recovery.
+2023-01-10 18:04:34 115 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:35 117 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:35 119 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:36 121 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:37 123 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:04:39 125 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:05:39 127 [Warning] Aborted connection 127 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:05:39 132 [Warning] Aborted connection 132 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:05:39 126 [Warning] Aborted connection 126 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:05:39 128 [Warning] Aborted connection 128 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:05:39 133 [Warning] Aborted connection 133 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:05:39 130 [Warning] Aborted connection 130 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:05:39 129 [Warning] Aborted connection 129 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:05:39 131 [Warning] Aborted connection 131 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 144 [Warning] Aborted connection 144 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 140 [Warning] Aborted connection 140 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 142 [Warning] Aborted connection 142 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 134 [Warning] Aborted connection 134 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 135 [Warning] Aborted connection 135 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 139 [Warning] Aborted connection 139 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 143 [Warning] Aborted connection 143 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 141 [Warning] Aborted connection 141 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 138 [Warning] Aborted connection 138 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 136 [Warning] Aborted connection 136 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:07:01 137 [Warning] Aborted connection 137 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 160 [Warning] Aborted connection 160 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 148 [Warning] Aborted connection 148 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 155 [Warning] Aborted connection 155 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 157 [Warning] Aborted connection 157 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 153 [Warning] Aborted connection 153 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 152 [Warning] Aborted connection 152 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 158 [Warning] Aborted connection 158 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 162 [Warning] Aborted connection 162 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 146 [Warning] Aborted connection 146 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 147 [Warning] Aborted connection 147 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 154 [Warning] Aborted connection 154 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 150 [Warning] Aborted connection 150 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 159 [Warning] Aborted connection 159 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 161 [Warning] Aborted connection 161 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 151 [Warning] Aborted connection 151 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 156 [Warning] Aborted connection 156 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 145 [Warning] Aborted connection 145 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:15:54 149 [Warning] Aborted connection 149 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 178 [Warning] Aborted connection 178 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 171 [Warning] Aborted connection 171 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 164 [Warning] Aborted connection 164 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 175 [Warning] Aborted connection 175 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 176 [Warning] Aborted connection 176 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 169 [Warning] Aborted connection 169 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 174 [Warning] Aborted connection 174 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 170 [Warning] Aborted connection 170 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 166 [Warning] Aborted connection 166 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 172 [Warning] Aborted connection 172 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 165 [Warning] Aborted connection 165 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 168 [Warning] Aborted connection 168 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 173 [Warning] Aborted connection 173 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 177 [Warning] Aborted connection 177 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 163 [Warning] Aborted connection 163 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:16:01 167 [Warning] Aborted connection 167 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 180 [Warning] Aborted connection 180 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 187 [Warning] Aborted connection 187 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 186 [Warning] Aborted connection 186 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 185 [Warning] Aborted connection 185 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 184 [Warning] Aborted connection 184 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 183 [Warning] Aborted connection 183 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 182 [Warning] Aborted connection 182 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 181 [Warning] Aborted connection 181 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:17:45 179 [Warning] Aborted connection 179 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:22:28 188 [Warning] Aborted connection 188 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 199 [Warning] Aborted connection 199 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 200 [Warning] Aborted connection 200 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 201 [Warning] Aborted connection 201 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 194 [Warning] Aborted connection 194 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 202 [Warning] Aborted connection 202 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 193 [Warning] Aborted connection 193 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 204 [Warning] Aborted connection 204 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 205 [Warning] Aborted connection 205 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 206 [Warning] Aborted connection 206 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 203 [Warning] Aborted connection 203 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 196 [Warning] Aborted connection 196 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 191 [Warning] Aborted connection 191 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 195 [Warning] Aborted connection 195 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 197 [Warning] Aborted connection 197 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 192 [Warning] Aborted connection 192 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 190 [Warning] Aborted connection 190 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 189 [Warning] Aborted connection 189 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:52 198 [Warning] Aborted connection 198 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:54 210 [Warning] Aborted connection 210 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:54 207 [Warning] Aborted connection 207 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:54 212 [Warning] Aborted connection 212 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:54 211 [Warning] Aborted connection 211 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:54 208 [Warning] Aborted connection 208 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:24:54 209 [Warning] Aborted connection 209 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:28:34 219 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:33:39 217 [Warning] Aborted connection 217 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:33:39 216 [Warning] Aborted connection 216 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:33:39 214 [Warning] Aborted connection 214 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:33:39 215 [Warning] Aborted connection 215 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:33:39 213 [Warning] Aborted connection 213 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:51:33 221 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 18:51:59 227 [Warning] Aborted connection 227 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:51:59 228 [Warning] Aborted connection 228 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:51:59 222 [Warning] Aborted connection 222 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:51:59 226 [Warning] Aborted connection 226 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:51:59 223 [Warning] Aborted connection 223 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:51:59 224 [Warning] Aborted connection 224 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 18:51:59 225 [Warning] Aborted connection 225 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:11:46 8 [Warning] Aborted connection 8 to db: 'unconnected' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2023-01-10 19:12:20 9 [Warning] Aborted connection 9 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2023-01-10 19:13:35 229 [Warning] Aborted connection 229 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:13:53 231 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 19:13:54 233 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 19:13:56 235 [ERROR] mysqld: Incorrect information in file: '.\mysql\user.frm'
+2023-01-10 19:14:33 236 [Warning] Aborted connection 236 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 238 [Warning] Aborted connection 238 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 237 [Warning] Aborted connection 237 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 240 [Warning] Aborted connection 240 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 245 [Warning] Aborted connection 245 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 244 [Warning] Aborted connection 244 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 243 [Warning] Aborted connection 243 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 242 [Warning] Aborted connection 242 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 241 [Warning] Aborted connection 241 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-10 19:14:33 239 [Warning] Aborted connection 239 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
