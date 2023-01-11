@@ -111,6 +111,13 @@ public class login extends javax.swing.JFrame {
 
         // creating the object
         ConnectionDB cdb = new ConnectionDB();
+        Role r = new Role();
+        
+        //getting the value of boolean class Role
+        String qry = r.qry;
+        boolean teacher = r.teacher;
+        
+        // declaration and getting the values from user
         String username = jTextField2.getText();
         String password = jPasswordField1.getText();
         
@@ -120,7 +127,25 @@ public class login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Username and Password should not be empty.", "Error", JOptionPane.ERROR_MESSAGE);
         }
         else{
-            cdb.connection(username, password);
+            // passing arguments
+            cdb.connection(username, password, qry);
+            
+            // getting the attributes from class
+            boolean validation = cdb.validation;
+            
+            // condition to check if the user is teacher or a student
+            // it also checks if the user input the right username and password
+            // if all condition met, it will proceed to another form
+            if(teacher == true && validation == true){
+                Teacher t = new Teacher();
+                t.setVisible(true);
+                this.setVisible(false);
+            }
+            else if(teacher == false && validation == true){
+                Student s = new Student();
+                s.setVisible(true);
+                this.setVisible(false);
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
