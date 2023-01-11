@@ -10,11 +10,17 @@ package joysis_ams;
  * @author DOKTORHUSAY
  */
 public class Role extends javax.swing.JFrame {
+    // attributes
+    static String qry;
+    static boolean teacher;
+    
+    // open new Jframe
     public void openFrame(){
         login l = new login();
         l.setVisible(true);
         this.setVisible(false);
     }
+    
     /**
      * Creates new form Role
      */
@@ -82,11 +88,16 @@ public class Role extends javax.swing.JFrame {
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
         openFrame();
+        qry = "SELECT * FROM teacher WHERE username = ? and password = ?"; //teacher
+        teacher = true;
+        
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
         openFrame();
+         qry = "SELECT * FROM student WHERE username = ? and password = ?"; // student
+         teacher = false;
     }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
