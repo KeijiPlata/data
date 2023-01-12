@@ -1518,3 +1518,13 @@ Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2023-01-12 17:32:19 808 [Warning] Aborted connection 808 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2023-01-12 17:32:42 809 [Warning] Aborted connection 809 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2023-01-12 17:33:37 804 [Warning] Aborted connection 804 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:51:06 811 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:01:35 814 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:01:35 816 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:02:05 818 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:02:06 820 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:02:06 822 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:02:06 824 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:02:06 826 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:02:06 828 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 18:02:18 812 [Warning] Aborted connection 812 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
