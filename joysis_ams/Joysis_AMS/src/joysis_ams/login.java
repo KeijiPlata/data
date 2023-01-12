@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author DOKTORHUSAY
  */
 public class login extends javax.swing.JFrame {
-
+    static String username1;
     /**
      * Creates new form login
      */
@@ -137,14 +137,22 @@ public class login extends javax.swing.JFrame {
             // it also checks if the user input the right username and password
             // if all condition met, it will proceed to another form
             if(teacher == true && validation == true){
+                // opening form, closing this form
                 Teacher t = new Teacher();
                 t.setVisible(true);
                 this.setVisible(false);
+                
+                // passing the username so we can query to teacher form
+                username1 = cdb.uname;
             }
             else if(teacher == false && validation == true){
+                // opening form, closing this form
                 Student s = new Student();
                 s.setVisible(true);
                 this.setVisible(false);
+                
+                // passing the username so we can query to student form
+                username1 = cdb.uname;
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
