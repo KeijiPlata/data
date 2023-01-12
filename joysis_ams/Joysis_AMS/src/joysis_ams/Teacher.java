@@ -111,6 +111,7 @@ public class Teacher extends javax.swing.JFrame {
             while (rs.next()) {
                 String name = rs.getString("student_id");
                 EidCB.addItem(name);
+                RidCB.addItem(name);
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
@@ -156,40 +157,40 @@ public class Teacher extends javax.swing.JFrame {
         addBtn = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        EusernameTF = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        EfirstnameTF = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        EmiddlenameTF = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        ElastnameTF = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        EpasswordTF = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        EsectionTF = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         EidCB = new javax.swing.JComboBox<>();
-        jTextField22 = new javax.swing.JTextField();
+        EgenderTF = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        updateBtn = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        RusernameTF = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        RfirstnameTF = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
+        RmiddlenameTF = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
+        RlastnameTF = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
+        RpasswordTF = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
-        jTextField20 = new javax.swing.JTextField();
+        RsectionTF = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField23 = new javax.swing.JTextField();
+        RidCB = new javax.swing.JComboBox<>();
+        RgenderTF = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        removeBtn = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         teacherTable = new javax.swing.JTable();
 
@@ -365,57 +366,62 @@ public class Teacher extends javax.swing.JFrame {
         jLabel14.setText("Student ID");
         jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 19));
 
-        jTextField9.setText("jTextField1");
-        jPanel4.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 138, 29));
+        EusernameTF.setText("jTextField1");
+        jPanel4.add(EusernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 138, 29));
 
         jLabel15.setText("Username");
         jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 138, 19));
 
-        jTextField10.setText("jTextField1");
-        jPanel4.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, 138, 29));
+        EfirstnameTF.setText("jTextField1");
+        jPanel4.add(EfirstnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, 138, 29));
 
         jLabel16.setText("First Name");
         jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 67, 138, 19));
 
-        jTextField11.setText("jTextField1");
-        jPanel4.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 92, 138, 29));
+        EmiddlenameTF.setText("jTextField1");
+        jPanel4.add(EmiddlenameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 92, 138, 29));
 
         jLabel17.setText("Middle Name");
         jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 67, 138, 19));
 
-        jTextField12.setText("jTextField1");
-        jPanel4.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 92, 138, 29));
+        ElastnameTF.setText("jTextField1");
+        jPanel4.add(ElastnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 92, 138, 29));
 
         jLabel18.setText("Last Name");
         jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 67, 138, 19));
 
-        jTextField13.setText("jTextField1");
-        jPanel4.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 138, 29));
+        EpasswordTF.setText("jTextField1");
+        jPanel4.add(EpasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 138, 29));
 
         jLabel19.setText("Password");
         jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 138, 19));
 
-        jTextField14.setText("jTextField1");
-        jPanel4.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 138, 29));
+        EsectionTF.setText("jTextField1");
+        jPanel4.add(EsectionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 138, 29));
 
         jLabel20.setText("Section");
         jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 138, 19));
 
+        EidCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EidCBActionPerformed(evt);
+            }
+        });
         jPanel4.add(EidCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 30));
 
-        jTextField22.setText("jTextField1");
-        jPanel4.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 138, 29));
+        EgenderTF.setText("jTextField1");
+        jPanel4.add(EgenderTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 138, 29));
 
         jLabel28.setText("Gender");
         jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 138, 19));
 
-        jButton6.setText("Update");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        updateBtn.setText("Update");
+        updateBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                updateBtnActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
+        jPanel4.add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
 
         jTabbedPane1.addTab("Edit Student", jPanel4);
 
@@ -424,53 +430,62 @@ public class Teacher extends javax.swing.JFrame {
         jLabel21.setText("Student ID");
         jPanel5.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 19));
 
-        jTextField15.setText("jTextField1");
-        jPanel5.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 138, 29));
+        RusernameTF.setText("jTextField1");
+        jPanel5.add(RusernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 138, 29));
 
         jLabel22.setText("Username");
         jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 138, 19));
 
-        jTextField16.setText("jTextField1");
-        jPanel5.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, 138, 29));
+        RfirstnameTF.setText("jTextField1");
+        jPanel5.add(RfirstnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, 138, 29));
 
         jLabel23.setText("First Name");
         jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 67, 138, 19));
 
-        jTextField17.setText("jTextField1");
-        jPanel5.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 92, 138, 29));
+        RmiddlenameTF.setText("jTextField1");
+        jPanel5.add(RmiddlenameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 92, 138, 29));
 
         jLabel24.setText("Middle Name");
         jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 67, 138, 19));
 
-        jTextField18.setText("jTextField1");
-        jPanel5.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 92, 138, 29));
+        RlastnameTF.setText("jTextField1");
+        jPanel5.add(RlastnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 92, 138, 29));
 
         jLabel25.setText("Last Name");
         jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 67, 138, 19));
 
-        jTextField19.setText("jTextField1");
-        jPanel5.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 138, 29));
+        RpasswordTF.setText("jTextField1");
+        jPanel5.add(RpasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 138, 29));
 
         jLabel26.setText("Password");
         jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 138, 19));
 
-        jTextField20.setText("jTextField1");
-        jPanel5.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 138, 29));
+        RsectionTF.setText("jTextField1");
+        jPanel5.add(RsectionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 138, 29));
 
         jLabel27.setText("Section");
         jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 138, 19));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel5.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 30));
+        RidCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RidCBActionPerformed(evt);
+            }
+        });
+        jPanel5.add(RidCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 30));
 
-        jTextField23.setText("jTextField1");
-        jPanel5.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 138, 29));
+        RgenderTF.setText("jTextField1");
+        jPanel5.add(RgenderTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 138, 29));
 
         jLabel29.setText("Gender");
         jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 138, 19));
 
-        jButton5.setText("Remove");
-        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
+        removeBtn.setText("Remove");
+        removeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeBtnActionPerformed(evt);
+            }
+        });
+        jPanel5.add(removeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
 
         jTabbedPane1.addTab("Remove Student", jPanel5);
 
@@ -594,9 +609,104 @@ public class Teacher extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_dateCBActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+        try {
+            String username = EusernameTF.getText();
+            String password = EpasswordTF.getText();
+            String firstname = EfirstnameTF.getText();
+            String middlename = EmiddlenameTF.getText();
+            String lastname = ElastnameTF.getText();
+            String section = EsectionTF.getText();
+            String gender = EgenderTF.getText();
+            String id = EidCB.getSelectedItem().toString();
+            
+            pst = conn.prepareStatement("UPDATE `student` SET `username`=?,`password`=?,`firstname`=?,`middlename`=?,`lastname`=?,`section`=?,`gender`=? WHERE student_id = ?");
+            pst.setString(1,username);
+            pst.setString(2,password);
+            pst.setString(3,firstname);
+            pst.setString(4,middlename);
+            pst.setString(5,lastname);
+            pst.setString(6,section);
+            pst.setString(7,gender);
+            pst.setString(8,id);
+            int result = pst.executeUpdate();
+            
+            if (result==1) {
+                JOptionPane.showMessageDialog(this, username+"'s Information has been Updated!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Updating "+username+"'s Information Failed!");
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_updateBtnActionPerformed
+
+    private void EidCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EidCBActionPerformed
+        // TODO add your handling code here:
+        try {
+            String id = EidCB.getSelectedItem().toString();
+            
+            pst = conn.prepareStatement("SELECT * FROM student WHERE student_id = ?");
+            pst.setString(1, id);
+            rs = pst.executeQuery();
+            
+            if (rs.next()==true) {
+                EusernameTF.setText(rs.getString("username"));
+                EpasswordTF.setText(rs.getString("password"));
+                EfirstnameTF.setText(rs.getString("firstname"));
+                EmiddlenameTF.setText(rs.getString("middlename"));
+                ElastnameTF.setText(rs.getString("lastname"));
+                EsectionTF.setText(rs.getString("section"));
+                EgenderTF.setText(rs.getString("gender"));
+            } else {
+                JOptionPane.showMessageDialog(this, "No Record Found!");
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_EidCBActionPerformed
+
+    private void RidCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RidCBActionPerformed
+        // TODO add your handling code here:
+        try {
+            String id = RidCB.getSelectedItem().toString();
+            
+            pst = conn.prepareStatement("SELECT * FROM student WHERE student_id = ?");
+            pst.setString(1, id);
+            rs = pst.executeQuery();
+            
+            if (rs.next()==true) {
+                RusernameTF.setText(rs.getString("username"));
+                RpasswordTF.setText(rs.getString("password"));
+                RfirstnameTF.setText(rs.getString("firstname"));
+                RmiddlenameTF.setText(rs.getString("middlename"));
+                RlastnameTF.setText(rs.getString("lastname"));
+                RsectionTF.setText(rs.getString("section"));
+                RgenderTF.setText(rs.getString("gender"));
+            } else {
+                JOptionPane.showMessageDialog(this, "No Record Found!");
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_RidCBActionPerformed
+
+    private void removeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBtnActionPerformed
+        // TODO add your handling code here:
+        try {
+            String username = RusernameTF.getText();
+            String id = RidCB.getSelectedItem().toString();
+            
+            pst = conn.prepareStatement("DELETE FROM `student` WHERE student_id = ?");
+            pst.setString(1,id);
+            int result = pst.executeUpdate();
+            
+            if (result==1) {
+                JOptionPane.showMessageDialog(this, username+"'s Account has been Deleted!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Deletion of "+username+"'s Account has Failed!");
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_removeBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -641,15 +751,27 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JTextField ApasswordTF;
     private javax.swing.JTextField AsectionTF;
     private javax.swing.JTextField AusernameTF;
+    private javax.swing.JTextField EfirstnameTF;
+    private javax.swing.JTextField EgenderTF;
     private javax.swing.JComboBox<String> EidCB;
+    private javax.swing.JTextField ElastnameTF;
+    private javax.swing.JTextField EmiddlenameTF;
+    private javax.swing.JTextField EpasswordTF;
+    private javax.swing.JTextField EsectionTF;
+    private javax.swing.JTextField EusernameTF;
+    private javax.swing.JTextField RfirstnameTF;
+    private javax.swing.JTextField RgenderTF;
+    private javax.swing.JComboBox<String> RidCB;
+    private javax.swing.JTextField RlastnameTF;
+    private javax.swing.JTextField RmiddlenameTF;
+    private javax.swing.JTextField RpasswordTF;
+    private javax.swing.JTextField RsectionTF;
+    private javax.swing.JTextField RusernameTF;
     private javax.swing.JButton addBtn;
     private javax.swing.JButton clearFilter;
     private javax.swing.JComboBox<String> dateCB;
     private javax.swing.JTextField genderTF1;
     private javax.swing.JComboBox<String> idCB;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
@@ -683,22 +805,10 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JComboBox<String> nameCB;
+    private javax.swing.JButton removeBtn;
     private javax.swing.JComboBox<String> statusCB;
     private javax.swing.JTable teacherTable;
+    private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
 }
