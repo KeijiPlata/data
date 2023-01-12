@@ -63,7 +63,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\xampp\mysql\data\images\TEACHER.png"/>
+              <Image iconType="3" name="/joysis_ams/TEACHER.png"/>
             </Property>
           </Properties>
           <Events>
@@ -78,7 +78,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\xampp\mysql\data\images\STUDENT.png"/>
+              <Image iconType="3" name="/joysis_ams/STUDENT.png"/>
             </Property>
           </Properties>
           <Events>
