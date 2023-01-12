@@ -53,16 +53,15 @@ public class Role extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(240, 30, 343, 47);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/joysis_ams/TEACHER.png"))); // NOI18N
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
             }
         });
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(460, 130, 200, 339);
+        jLabel2.setBounds(460, 130, 0, 0);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/joysis_ams/STUDENT.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/joysis_ams/student img.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
