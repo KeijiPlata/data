@@ -38,10 +38,9 @@ public class Role extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        Student = new javax.swing.JLabel();
+        bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 255));
@@ -49,40 +48,41 @@ public class Role extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
-        jLabel3.setText("PICK YOUR ROLE");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
-
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/TEACHER.png"))); // NOI18N
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, -1, -1));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/STUDENT.png"))); // NOI18N
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
 
-        Student.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/platform 1.png"))); // NOI18N
-        Student.setText(".");
-        jPanel1.add(Student, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 560));
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/platform 1.png"))); // NOI18N
+        bg.setText(".");
+        jPanel1.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 850, 560));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
@@ -136,10 +136,9 @@ public class Role extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Student;
+    private javax.swing.JLabel bg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
