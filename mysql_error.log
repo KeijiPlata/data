@@ -1089,3 +1089,432 @@ Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2023-01-12 12:23:50 0 [Note] Plugin 'FEEDBACK' is disabled.
 2023-01-12 12:23:50 0 [Note] InnoDB: Buffer pool(s) load completed at 230112 12:23:50
 2023-01-12 12:23:50 0 [Note] Server socket created on IP: '::'.
+2023-01-12 12:45:27 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-01-12 12:45:27 0 [Note] InnoDB: Uses event mutexes
+2023-01-12 12:45:27 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+2023-01-12 12:45:27 0 [Note] InnoDB: Number of pools: 1
+2023-01-12 12:45:27 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2023-01-12 12:45:27 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2023-01-12 12:45:27 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-01-12 12:45:27 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=418003
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try1\trial1tb.ibd' OS error: 203
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-12 12:45:27 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try1`.`trial1tb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-12 12:45:27 0 [Warning] InnoDB: Ignoring tablespace for `try1`.`trial1tb` because it could not be opened.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\loginstudent.ibd' OS error: 203
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-12 12:45:27 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`loginstudent``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-12 12:45:27 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`loginstudent` because it could not be opened.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\personalinfo.ibd' OS error: 203
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-12 12:45:27 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`personalinfo``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-12 12:45:27 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`personalinfo` because it could not be opened.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\trydb.ibd' OS error: 203
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-12 12:45:27 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-12 12:45:27 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`trydb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-12 12:45:27 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`trydb` because it could not be opened.
+2023-01-12 12:45:27 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2023-01-12 12:45:27 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-01-12 12:45:27 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-01-12 12:45:27 0 [Note] InnoDB: Setting file 'D:\Applications\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2023-01-12 12:45:27 0 [Note] InnoDB: File 'D:\Applications\xampp\mysql\data\ibtmp1' size is now 12 MB.
+2023-01-12 12:45:27 0 [Note] InnoDB: Waiting for purge to start
+2023-01-12 12:45:27 0 [Note] InnoDB: 10.4.27 started; log sequence number 418012; transaction id 921
+2023-01-12 12:45:27 0 [Note] InnoDB: Loading buffer pool(s) from D:\Applications\xampp\mysql\data\ib_buffer_pool
+2023-01-12 12:45:27 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-01-12 12:45:27 0 [Note] Server socket created on IP: '::'.
+2023-01-12 12:45:27 0 [Note] InnoDB: Buffer pool(s) load completed at 230112 12:45:27
+2023-01-12 12:45:27 0 [Note] Reading of all Master_info entries succeeded
+2023-01-12 12:45:27 0 [Note] Added new Master_info '' to hash table
+2023-01-12 12:45:27 0 [Note] D:\applications\xampp\mysql\bin\mysqld.exe: ready for connections.
+Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2023-01-12 12:45:32 9 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:34 11 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:34 13 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:34 15 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:34 17 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:34 19 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:36 21 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:37 23 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:57 25 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 12:45:58 27 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:07 30 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:07 32 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:17 34 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:17 36 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:17 38 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:26 40 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:26 42 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:26 44 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:00:29 28 [Warning] Aborted connection 28 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:00:55 47 [Warning] Aborted connection 47 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:01:10 50 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:01:11 52 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:01:21 48 [Warning] Aborted connection 48 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:01:45 53 [Warning] Aborted connection 53 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:03:38 55 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:03:39 57 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:04:33 60 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:04:33 62 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:04:33 64 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:04:59 66 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:04:59 68 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:04:59 70 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:05:01 74 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:05:01 76 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:05:42 77 [Warning] Aborted connection 77 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:06:25 78 [Warning] Aborted connection 78 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:06:36 79 [Warning] Aborted connection 79 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:15:42 80 [Warning] Aborted connection 80 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:16:55 81 [Warning] Aborted connection 81 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:17:15 82 [Warning] Aborted connection 82 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:17:34 83 [Warning] Aborted connection 83 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:18:31 84 [Warning] Aborted connection 84 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:20:54 85 [Warning] Aborted connection 85 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:23:20 87 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:23:20 89 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:23:21 91 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:23:28 93 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:23:28 95 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:25:49 96 [Warning] Aborted connection 96 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:27:19 97 [Warning] Aborted connection 97 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:29:51 99 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:29:52 101 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:29:52 103 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:30:03 109 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:30:30 125 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:30:31 127 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:30:41 129 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:30:41 131 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:30:41 133 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:30:42 137 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:30:55 157 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:32:49 158 [Warning] Aborted connection 158 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:33:12 159 [Warning] Aborted connection 159 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:35:55 160 [Warning] Aborted connection 160 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:36:05 161 [Warning] Aborted connection 161 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:36:45 162 [Warning] Aborted connection 162 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:36:53 164 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:36:53 166 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:36:53 168 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:36:54 172 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:36:55 176 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:45:42 177 [Warning] Aborted connection 177 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:47:04 179 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:47:05 181 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:47:05 183 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:47:40 185 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:47:40 187 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:47:40 189 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:47:42 193 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:47:43 195 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:47:43 197 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:48:18 199 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:48:18 201 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:48:18 203 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:48:21 207 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:48:21 209 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:48:21 211 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:50:01 213 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:50:01 215 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:50:01 217 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:50:02 221 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:50:02 223 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:50:30 225 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:50:30 227 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:50:30 229 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:51:05 231 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:51:05 233 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:51:05 235 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 13:53:00 238 [Warning] Aborted connection 238 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:53:28 239 [Warning] Aborted connection 239 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:54:03 240 [Warning] Aborted connection 240 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 13:58:21 241 [Warning] Aborted connection 241 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:01:29 242 [Warning] Aborted connection 242 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:02:05 243 [Warning] Aborted connection 243 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:04:05 244 [Warning] Aborted connection 244 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:05:38 245 [Warning] Aborted connection 245 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:11:27 247 [Warning] Aborted connection 247 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:15:00 250 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:15:04 248 [Warning] Aborted connection 248 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:16:14 251 [Warning] Aborted connection 251 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:23:55 252 [Warning] Aborted connection 252 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:24:29 253 [Warning] Aborted connection 253 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:25:11 254 [Warning] Aborted connection 254 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:27:21 257 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:27:21 259 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:27:21 261 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:27:23 255 [Warning] Aborted connection 255 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:32:57 265 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:33:19 277 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:33:24 279 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:33:37 291 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:33:42 297 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:34:05 305 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:35:16 306 [Warning] Aborted connection 306 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:36:29 307 [Warning] Aborted connection 307 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:36:47 309 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:36:47 311 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:36:47 313 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:36:48 317 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:36:57 327 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:38:08 328 [Warning] Aborted connection 328 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:39:07 330 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:39:07 332 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:39:07 334 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:39:08 338 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:39:10 342 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:39:41 343 [Warning] Aborted connection 343 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:40:08 345 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:08 347 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:12 349 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:12 351 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:12 353 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:54 357 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:54 359 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:55 361 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:55 363 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:40:55 367 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:41:01 369 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:41:02 373 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 14:41:42 374 [Warning] Aborted connection 374 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:46:22 246 [Warning] Aborted connection 246 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:46:33 375 [Warning] Aborted connection 375 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:50:09 376 [Warning] Aborted connection 376 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:50:42 377 [Warning] Aborted connection 377 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:57:46 378 [Warning] Aborted connection 378 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:58:29 379 [Warning] Aborted connection 379 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:58:41 380 [Warning] Aborted connection 380 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 14:58:52 381 [Warning] Aborted connection 381 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 15:01:14 382 [Warning] Aborted connection 382 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 15:01:27 383 [Warning] Aborted connection 383 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 15:04:51 385 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:10:19 387 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:10:19 389 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:10:19 391 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:18:46 393 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:18:47 395 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:20:25 397 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:20:25 399 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:20:25 401 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:19 405 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:20 407 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:20 409 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:33 411 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:33 413 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:33 415 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:37 417 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:38 419 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:41 421 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:21:41 423 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:25:33 425 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:25:33 427 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:25:37 429 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:25:38 431 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:27:29 433 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:27:29 435 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:27:31 437 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:27:31 439 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:22 441 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:22 443 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:22 445 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:36 447 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:37 449 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:39 451 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:40 453 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:42 455 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:42 457 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:55 459 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:43:55 461 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:45:02 463 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:45:19 467 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:45:20 469 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:45:20 471 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:45:20 473 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:45:20 475 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:45:20 477 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:45:20 479 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:51:01 481 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:51:02 483 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:51:03 485 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:51:04 487 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:51:10 489 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 15:51:11 491 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:01:45 493 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:01:46 495 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:01:46 497 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:08:51 503 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:08:52 505 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:12:36 508 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:12:36 510 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:12:39 512 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:12:41 514 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:12:41 516 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:12:41 518 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:12:41 520 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:12:42 522 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:13:43 506 [Warning] Aborted connection 506 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:14:08 525 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:14:08 527 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:14:11 523 [Warning] Aborted connection 523 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:15:25 528 [Warning] Aborted connection 528 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:16:14 529 [Warning] Aborted connection 529 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:17:03 530 [Warning] Aborted connection 530 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:17:39 531 [Warning] Aborted connection 531 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:18:08 532 [Warning] Aborted connection 532 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:18:45 533 [Warning] Aborted connection 533 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:18:51 534 [Warning] Aborted connection 534 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:19:07 535 [Warning] Aborted connection 535 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:19:35 536 [Warning] Aborted connection 536 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:20:46 537 [Warning] Aborted connection 537 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:21:00 538 [Warning] Aborted connection 538 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:21:09 540 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:21:09 542 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:21:09 544 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:21:16 552 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:21:31 568 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:21:33 570 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:21:33 572 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:22:08 573 [Warning] Aborted connection 573 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:23:32 575 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:23:33 577 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:27:31 578 [Warning] Aborted connection 578 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:28:23 579 [Warning] Aborted connection 579 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:28:35 580 [Warning] Aborted connection 580 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:28:53 581 [Warning] Aborted connection 581 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:29:07 582 [Warning] Aborted connection 582 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:29:35 583 [Warning] Aborted connection 583 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:30:36 584 [Warning] Aborted connection 584 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:30:50 585 [Warning] Aborted connection 585 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:32:23 587 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:32:23 589 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:32:24 593 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:32:41 594 [Warning] Aborted connection 594 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:32:58 604 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:33:00 608 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:34:37 611 [Warning] Aborted connection 611 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:35:12 629 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:35:23 637 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:35:25 639 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:35:25 641 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:35:40 642 [Warning] Aborted connection 642 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:35:59 643 [Warning] Aborted connection 643 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:37:17 644 [Warning] Aborted connection 644 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:37:37 645 [Warning] Aborted connection 645 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:38:02 646 [Warning] Aborted connection 646 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:38:17 647 [Warning] Aborted connection 647 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:38:30 648 [Warning] Aborted connection 648 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:41:28 649 [Warning] Aborted connection 649 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:43:44 651 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:43:44 653 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:18 655 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:18 657 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:19 659 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:20 661 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:20 663 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:32 665 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:32 667 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:32 669 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:38 673 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:38 675 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:38 677 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:51 679 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:51 681 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:51 685 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:53 687 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:44:53 689 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:45:10 690 [Warning] Aborted connection 690 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:46:22 691 [Warning] Aborted connection 691 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:46:33 692 [Warning] Aborted connection 692 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:46:52 693 [Warning] Aborted connection 693 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:47:00 695 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:47:00 697 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:47:00 699 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:47:01 703 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:47:02 707 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:47:24 708 [Warning] Aborted connection 708 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:49:22 709 [Warning] Aborted connection 709 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:51:45 710 [Warning] Aborted connection 710 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:54:14 711 [Warning] Aborted connection 711 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:54:19 713 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:54:19 715 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 16:55:03 716 [Warning] Aborted connection 716 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:55:36 717 [Warning] Aborted connection 717 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:56:10 718 [Warning] Aborted connection 718 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:56:47 719 [Warning] Aborted connection 719 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 16:59:23 720 [Warning] Aborted connection 720 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:00:00 721 [Warning] Aborted connection 721 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:00:34 722 [Warning] Aborted connection 722 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:04:11 723 [Warning] Aborted connection 723 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:04:56 724 [Warning] Aborted connection 724 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:05:27 725 [Warning] Aborted connection 725 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:06:28 728 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:28 730 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:28 732 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:29 734 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:29 736 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:32 738 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:32 740 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:39 742 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:39 744 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:39 746 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:44 752 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:50 758 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:51 760 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:51 762 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:06:53 726 [Warning] Aborted connection 726 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:07:07 763 [Warning] Aborted connection 763 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:07:31 764 [Warning] Aborted connection 764 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:08:19 765 [Warning] Aborted connection 765 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:08:53 766 [Warning] Aborted connection 766 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:11:36 767 [Warning] Aborted connection 767 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:12:08 768 [Warning] Aborted connection 768 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:12:46 769 [Warning] Aborted connection 769 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:13:06 770 [Warning] Aborted connection 770 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:14:59 771 [Warning] Aborted connection 771 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:16:50 772 [Warning] Aborted connection 772 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:17:37 773 [Warning] Aborted connection 773 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:17:50 774 [Warning] Aborted connection 774 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:19:03 775 [Warning] Aborted connection 775 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:19:18 776 [Warning] Aborted connection 776 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:19:31 777 [Warning] Aborted connection 777 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:20:09 778 [Warning] Aborted connection 778 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:21:04 779 [Warning] Aborted connection 779 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:21:33 780 [Warning] Aborted connection 780 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:21:56 781 [Warning] Aborted connection 781 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:22:29 782 [Warning] Aborted connection 782 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:23:18 783 [Warning] Aborted connection 783 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:23:36 784 [Warning] Aborted connection 784 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:23:54 785 [Warning] Aborted connection 785 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:24:59 786 [Warning] Aborted connection 786 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:27:07 789 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:27:09 791 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:27:09 793 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:27:09 795 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:27:09 797 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:27:09 799 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:27:10 801 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:27:11 803 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-12 17:27:35 787 [Warning] Aborted connection 787 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:31:29 805 [Warning] Aborted connection 805 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:31:42 806 [Warning] Aborted connection 806 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:32:01 807 [Warning] Aborted connection 807 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:32:19 808 [Warning] Aborted connection 808 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:32:42 809 [Warning] Aborted connection 809 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-12 17:33:37 804 [Warning] Aborted connection 804 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
