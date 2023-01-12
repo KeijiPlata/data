@@ -4,6 +4,8 @@
  */
 package joysis_ams;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 /**
@@ -12,18 +14,43 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Student extends javax.swing.JFrame {
     static String viewqry;
-    static String studentStatus;
-     public void viewTable(String qry, String usernamee){
-          try{
+    static String strDate ;
+     public void qryDate(String Date){
+         try{
             String db = "jdbc:mysql://localhost:3306/joysis_ams";
             Connection conn = DriverManager.getConnection(db, "root", null);
+            String qry = "SELECT * FROM attendance WHERE date = ?";
             PreparedStatement ps = conn.prepareStatement(qry);
-            ps.setString(1, usernamee);
+            ps.setString(1, Date);
             ResultSet rslt = ps.executeQuery();
             DefaultTableModel tbl = (DefaultTableModel)jtbl.getModel();
             tbl.setRowCount(0);
             while(rslt.next()){
-                String date = rslt.getString("attendanceDate");
+                String date = rslt.getString("date");
+                String stats = rslt.getString("status");
+                String remarks = rslt.getString("remarks");
+                
+                String data[] = {date, stats, remarks};
+                tbl.addRow(data);
+            }
+            
+         }
+         catch(Exception a){
+            JOptionPane.showMessageDialog(null, a);
+            a.printStackTrace();
+         }
+     }
+     public void viewTable(String qry, String id){
+          try{
+            String db = "jdbc:mysql://localhost:3306/joysis_ams";
+            Connection conn = DriverManager.getConnection(db, "root", null);
+            PreparedStatement ps = conn.prepareStatement(qry);
+            ps.setString(1, id);
+            ResultSet rslt = ps.executeQuery();
+            DefaultTableModel tbl = (DefaultTableModel)jtbl.getModel();
+            tbl.setRowCount(0);
+            while(rslt.next()){
+                String date = rslt.getString("date");
                 String stats = rslt.getString("status");
                 String remarks = rslt.getString("remarks");
                 
@@ -38,26 +65,22 @@ public class Student extends javax.swing.JFrame {
 
      }
 
-     public void ComboBoxqry(String usernameee){
+     public void ComboBoxqry(){
         String selected = studentstatus.getSelectedItem().toString();
          switch(selected){
              case "Present":
-                 viewqry = "SELECT * FROM student WHERE username = ? AND status = 'Present'";
-                 studentStatus = "Present";
+                 viewqry = "SELECT * FROM attendance WHERE student_id = ? AND status = 'Present'";
                  break;
              case "Absent":
-                 viewqry = "SELECT * FROM student WHERE username = ? AND status = 'Absent'";
-                 studentStatus = "Absent";
+                 viewqry = "SELECT * FROM attendance  WHERE student_id = ? AND status = 'Absent'";
                  break;
                  
              case "Late":
-                 viewqry = "SELECT * FROM student WHERE username = ? AND status = 'Late'";
-                 studentStatus = "Late";
+                 viewqry = "SELECT * FROM attendance  WHERE student_id = ? AND status = 'Late'";
                  break;
                  
              default:
-                 viewqry = "SELECT * FROM student WHERE username = ?";
-                 studentStatus = "All";
+                 viewqry = "SELECT * FROM attendance  WHERE student_id = ?";
                  break;        
          }
      }
@@ -66,6 +89,7 @@ public class Student extends javax.swing.JFrame {
      */
     public Student() {
         initComponents();
+         
     }
 
     /**
@@ -83,11 +107,14 @@ public class Student extends javax.swing.JFrame {
         studentSection = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtbl = new javax.swing.JTable();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        studentDate = new com.toedter.calendar.JDateChooser();
         studentstatus = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
@@ -125,6 +152,13 @@ public class Student extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jtbl);
 
+        studentDate.setDateFormatString("yyyy-mm-dd");
+        studentDate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                studentDateMouseClicked(evt);
+            }
+        });
+
         studentstatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Present", "Late", "Absent" }));
         studentstatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +181,7 @@ public class Student extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(studentDate, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(152, 152, 152)
@@ -166,7 +200,7 @@ public class Student extends javax.swing.JFrame {
                     .addComponent(studentSection))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(studentDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(studentstatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -192,12 +226,14 @@ public class Student extends javax.swing.JFrame {
         login lg = new login();
         ConnectionDB cdb = new ConnectionDB();
         String username = lg.username1;
+        String studentid = Integer.toString(cdb.id);
         cdb.getUsername(username);
-        ComboBoxqry(username);
-        viewTable(viewqry, username);
+        ComboBoxqry();
+        viewTable(viewqry, studentid);
         studentName.setText(cdb.fname + " " + cdb.mname + " " + cdb.lname);
         studentId.setText(Integer.toString(cdb.id));
         studentSection.setText(cdb.sec);
+     
     }//GEN-LAST:event_formWindowOpened
 
     private void studentNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_studentNameMouseClicked
@@ -209,10 +245,22 @@ public class Student extends javax.swing.JFrame {
         login lg = new login();
         ConnectionDB cdb = new ConnectionDB();
         String username = lg.username1;
+        String studentid = Integer.toString(cdb.id);
         cdb.getUsername(username);
-        ComboBoxqry(username);
-        viewTable(viewqry, username);
+        ComboBoxqry();
+        viewTable(viewqry, studentid);
     }//GEN-LAST:event_studentstatusActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+     
+        
+    }//GEN-LAST:event_formWindowActivated
+
+    private void studentDateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_studentDateMouseClicked
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_studentDateMouseClicked
 
     /**
      * @param args the command line arguments
@@ -250,10 +298,10 @@ public class Student extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jtbl;
+    private com.toedter.calendar.JDateChooser studentDate;
     private javax.swing.JLabel studentId;
     private javax.swing.JLabel studentName;
     private javax.swing.JLabel studentSection;
