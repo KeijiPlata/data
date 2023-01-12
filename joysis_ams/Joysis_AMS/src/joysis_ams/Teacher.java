@@ -176,7 +176,7 @@ public class Teacher extends javax.swing.JFrame {
                         .addComponent(jLabel8)
                         .addGap(69, 69, 69)
                         .addComponent(jLabel10)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

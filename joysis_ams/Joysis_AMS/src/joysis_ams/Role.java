@@ -10,11 +10,17 @@ package joysis_ams;
  * @author DOKTORHUSAY
  */
 public class Role extends javax.swing.JFrame {
+    // attributes
+    static String qry;
+    static boolean teacher;
+    
+    // open new Jframe
     public void openFrame(){
         login l = new login();
         l.setVisible(true);
         this.setVisible(false);
     }
+    
     /**
      * Creates new form Role
      */
@@ -47,7 +53,7 @@ public class Role extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(240, 30, 343, 47);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("E:\\Program Files\\xampp\\mysql\\data\\images\\TEACHER.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\xampp\\mysql\\data\\images\\TEACHER.png")); // NOI18N
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -56,7 +62,7 @@ public class Role extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(460, 130, 200, 339);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Program Files\\xampp\\mysql\\data\\images\\STUDENT.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\xampp\\mysql\\data\\images\\STUDENT.png")); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -69,11 +75,11 @@ public class Role extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 849, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
         );
 
         pack();
@@ -82,11 +88,16 @@ public class Role extends javax.swing.JFrame {
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
         openFrame();
+        qry = "SELECT * FROM teacher WHERE username = ? and password = ?"; //teacher
+        teacher = true;
+        
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
         openFrame();
+         qry = "SELECT * FROM student WHERE username = ? and password = ?"; // student
+         teacher = false;
     }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
