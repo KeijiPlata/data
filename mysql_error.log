@@ -2419,3 +2419,53 @@ Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2023-01-13 13:46:54 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool
 2023-01-13 13:46:54 0 [Note] Plugin 'FEEDBACK' is disabled.
 2023-01-13 13:46:54 0 [Note] Server socket created on IP: '::'.
+2023-01-13 21:09:24 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-01-13 21:09:24 0 [Note] InnoDB: Uses event mutexes
+2023-01-13 21:09:24 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+2023-01-13 21:09:24 0 [Note] InnoDB: Number of pools: 1
+2023-01-13 21:09:24 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2023-01-13 21:09:24 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2023-01-13 21:09:24 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-01-13 21:09:24 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=549787
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try1\trial1tb.ibd' OS error: 203
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 21:09:24 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try1`.`trial1tb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 21:09:24 0 [Warning] InnoDB: Ignoring tablespace for `try1`.`trial1tb` because it could not be opened.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\loginstudent.ibd' OS error: 203
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 21:09:24 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`loginstudent``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 21:09:24 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`loginstudent` because it could not be opened.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\personalinfo.ibd' OS error: 203
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 21:09:24 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`personalinfo``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 21:09:24 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`personalinfo` because it could not be opened.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\trydb.ibd' OS error: 203
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 21:09:24 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 21:09:24 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`trydb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 21:09:24 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`trydb` because it could not be opened.
+2023-01-13 21:09:24 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2023-01-13 21:09:24 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-01-13 21:09:24 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-01-13 21:09:24 0 [Note] InnoDB: Setting file 'C:\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2023-01-13 21:09:24 0 [Note] InnoDB: File 'C:\xampp\mysql\data\ibtmp1' size is now 12 MB.
+2023-01-13 21:09:24 0 [Note] InnoDB: Waiting for purge to start
+2023-01-13 21:09:24 0 [Note] InnoDB: 10.4.27 started; log sequence number 549796; transaction id 1524
+2023-01-13 21:09:24 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool
+2023-01-13 21:09:24 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-01-13 21:09:24 0 [Note] Server socket created on IP: '::'.
