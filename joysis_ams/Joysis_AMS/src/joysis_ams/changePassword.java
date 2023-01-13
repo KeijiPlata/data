@@ -79,6 +79,7 @@ public class changePassword extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -124,7 +125,6 @@ public class changePassword extends javax.swing.JFrame {
         // TODO add your handling code here:
         ConnectionDB cdb = new ConnectionDB();
         String studentidGet = Integer.toString(cdb.id);
-        tryyy.setText(studentidGet);
      
         try{
             String db = "jdbc:mysql://localhost:3306/joysis_ams";

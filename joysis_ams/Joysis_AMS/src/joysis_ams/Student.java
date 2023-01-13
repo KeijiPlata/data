@@ -111,6 +111,8 @@ public class Student extends javax.swing.JFrame {
         jtbl = new javax.swing.JTable();
         studentstatus = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -138,13 +140,12 @@ public class Student extends javax.swing.JFrame {
         studentId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         studentId.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         studentId.setText("(Student ID)");
-        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 22, -1, -1));
+        jPanel1.add(studentId, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
 
         studentSection.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         studentSection.setText("Section");
         jPanel1.add(studentSection, new org.netbeans.lib.awtextra.AbsoluteConstraints(752, 22, -1, -1));
 
-        jtbl.setForeground(new java.awt.Color(102, 255, 102));
         jtbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -175,13 +176,25 @@ public class Student extends javax.swing.JFrame {
         jPanel1.add(studentstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 50, 104, -1));
 
         jButton1.setFont(new java.awt.Font("Yu Gothic Medium", 0, 12)); // NOI18N
-        jButton1.setText("change password");
+        jButton1.setText("Edit Account");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 530, 130, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 530, 130, 30));
+
+        jButton2.setText("Logout");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 530, 100, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("ID: ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1 (1).png"))); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(840, 560));
@@ -190,6 +203,7 @@ public class Student extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -224,6 +238,13 @@ public class Student extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
+        login lg = new login();
+        ConnectionDB cdb = new ConnectionDB();
+        String username = lg.username1;
+        String studentid = Integer.toString(cdb.id);
+        cdb.getUsername(username);
+        ComboBoxqry();
+        viewTable(viewqry, studentid);
      
         
     }//GEN-LAST:event_formWindowActivated
@@ -234,6 +255,13 @@ public class Student extends javax.swing.JFrame {
         cp.setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Role rl = new Role();
+        rl.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,7 +300,9 @@ public class Student extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jtbl;
