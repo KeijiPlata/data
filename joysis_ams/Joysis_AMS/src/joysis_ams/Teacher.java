@@ -666,7 +666,6 @@ public class Teacher extends javax.swing.JFrame {
         jLabel31.setText("Status");
         getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 81, 20));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Download\\AMS_Background.png")); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
