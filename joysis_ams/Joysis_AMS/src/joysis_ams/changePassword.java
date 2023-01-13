@@ -119,8 +119,8 @@ public class changePassword extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Student st = new Student();
-        String studentidGet = st.studentid;
+        ConnectionDB cdb = new ConnectionDB();
+        String studentidGet = Integer.toString(cdb.id);
         
         if (newPass.getText().equals(confirmPass.getText())){
                 try{
@@ -138,6 +138,9 @@ public class changePassword extends javax.swing.JFrame {
                      JOptionPane.showMessageDialog(this, "Information has been Updated!");
                      this.setVisible(false);
                  } 
+                 else{
+                     JOptionPane.showMessageDialog(this, "Information failed Update!");
+                 }
              }
              catch(Exception a){
                  JOptionPane.showMessageDialog(null, a);
