@@ -129,11 +129,13 @@ public class Student extends javax.swing.JFrame {
         });
 
         studentId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        studentId.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         studentId.setText("(Student ID)");
 
-        studentSection.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        studentSection.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         studentSection.setText("Section");
 
+        jtbl.setForeground(new java.awt.Color(102, 255, 102));
         jtbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -150,6 +152,7 @@ public class Student extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jtbl.setToolTipText("");
         jScrollPane1.setViewportView(jtbl);
 
         studentDate.setDateFormatString("yyyy-mm-dd");
@@ -184,7 +187,7 @@ public class Student extends javax.swing.JFrame {
                                 .addComponent(studentDate, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(152, 152, 152)
+                                .addGap(2, 2, 2)
                                 .addComponent(studentId)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(studentSection)))))
@@ -198,13 +201,13 @@ public class Student extends javax.swing.JFrame {
                     .addComponent(studentName)
                     .addComponent(studentId)
                     .addComponent(studentSection))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(studentDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(studentstatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -215,7 +218,9 @@ public class Student extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
