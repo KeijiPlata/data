@@ -4,11 +4,14 @@
  */
 package joysis_ams;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -23,6 +26,10 @@ public class Teacher extends javax.swing.JFrame {
     PreparedStatement pst2 = null;
     ResultSet rs2 = null;
     /**
+     * UI table
+     */
+    
+    /**
      * Creates new form Teacher
      */
     public Teacher() {
@@ -33,6 +40,15 @@ public class Teacher extends javax.swing.JFrame {
         fillStatus();
         fillDate();
         fillID2();
+        
+//        setBackground(new Color(0,0,0,0));
+//        
+//        teacherTable.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+//        teacherTable.getTableHeader().setOpaque(false);
+//        teacherTable.getTableHeader().setBackground(new Color(32, 136, 203));
+//        teacherTable.getTableHeader().setForeground(Color.white);
+//        teacherTable.setRowHeight(25);
+        
     }
     
     public void fillTable(){
