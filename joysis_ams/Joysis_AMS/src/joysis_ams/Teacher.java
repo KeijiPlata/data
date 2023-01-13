@@ -34,6 +34,9 @@ public class Teacher extends javax.swing.JFrame {
     public Teacher() {
         initComponents();
         fillTable();
+        fillTable2();
+        fillGender();
+        fillSection();
         fillID();
         fillName();
         fillStatus();
@@ -49,7 +52,17 @@ public class Teacher extends javax.swing.JFrame {
 //        teacherTable.setRowHeight(25);
         
     }
-    
+     public void fillTable2(){
+        try {
+            pst = conn.prepareStatement("SELECT * FROM student");
+            rs = pst.executeQuery();
+            
+            while(rs.next()) {
+                studentTablee.setModel(DbUtils.resultSetToTableModel(rs));
+            }
+        } catch (Exception e) {
+        }
+    }
     public void fillTable(){
         try {
             pst = conn.prepareStatement("SELECT * FROM attendance");
@@ -64,7 +77,7 @@ public class Teacher extends javax.swing.JFrame {
     
     private void fillID(){
         try {
-            String sql = "SELECT * from attendance";
+            String sql = "SELECT DISTINCT student_id from attendance";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -75,10 +88,37 @@ public class Teacher extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }
+     private void fillGender(){
+        try {
+            String sql = "SELECT DISTINCT gender from student";
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String name = rs.getString("gender");
+                sortGender.addItem(name);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+     
+       private void fillSection(){
+        try {
+            String sql = "SELECT DISTINCT section from student";
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String name = rs.getString("section");
+                sortSection.addItem(name);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
     
     private void fillName(){
         try {
-            String sql = "SELECT * from attendance";
+            String sql = "SELECT DISTINCT name from attendance";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -92,7 +132,7 @@ public class Teacher extends javax.swing.JFrame {
     
     private void fillStatus(){
         try {
-            String sql = "SELECT * from attendance";
+            String sql = "SELECT DISTINCT status from attendance";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -106,7 +146,7 @@ public class Teacher extends javax.swing.JFrame {
     
     private void fillDate(){
         try {
-            String sql = "SELECT * from attendance";
+            String sql = "SELECT DISTINCT date from attendance";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -170,12 +210,6 @@ public class Teacher extends javax.swing.JFrame {
     private void initComponents() {
 
         genderTF1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        statusCB = new javax.swing.JComboBox<>();
-        nameCB = new javax.swing.JComboBox<>();
-        idCB = new javax.swing.JComboBox<>();
-        dateCB = new javax.swing.JComboBox<>();
         clearFilter = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -242,11 +276,19 @@ public class Teacher extends javax.swing.JFrame {
         RCaddBtn = new javax.swing.JButton();
         RCdate = new com.toedter.calendar.JDateChooser();
         RCstatusTF = new javax.swing.JComboBox<>();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        studentTablee = new javax.swing.JTable();
+        sortSection = new javax.swing.JComboBox<>();
+        sortGender = new javax.swing.JComboBox<>();
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         teacherTable = new javax.swing.JTable();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        idCB = new javax.swing.JComboBox<>();
+        nameCB = new javax.swing.JComboBox<>();
+        statusCB = new javax.swing.JComboBox<>();
+        dateCB = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
         genderTF1.setText("Gender");
@@ -257,54 +299,13 @@ public class Teacher extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
-        jLabel1.setText("Teacher Name");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
-
-        jLabel5.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("Date");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 81, -1));
-
-        statusCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        statusCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                statusCBActionPerformed(evt);
-            }
-        });
-        getContentPane().add(statusCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 112, 20));
-
-        nameCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        nameCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameCBActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nameCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 125, -1));
-
-        idCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        idCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idCBActionPerformed(evt);
-            }
-        });
-        getContentPane().add(idCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 110, -1));
-
-        dateCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        dateCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dateCBActionPerformed(evt);
-            }
-        });
-        getContentPane().add(dateCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 108, 20));
-
         clearFilter.setText("Clear Filter");
         clearFilter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearFilterActionPerformed(evt);
             }
         });
-        getContentPane().add(clearFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, 90, 30));
+        getContentPane().add(clearFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, 90, 30));
 
         jPanel1.setBackground(new java.awt.Color(183, 219, 251));
 
@@ -632,7 +633,58 @@ public class Teacher extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Roll Call", jPanel2);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 730, 160));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 730, 160));
+
+        studentTablee.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(studentTablee);
+
+        sortSection.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Section" }));
+        sortSection.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortSectionActionPerformed(evt);
+            }
+        });
+
+        sortGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gender" }));
+        sortGender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sortGenderActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 734, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(sortSection, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(sortGender, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sortSection, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sortGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 363, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Student", jPanel6);
 
         teacherTable.setBackground(new java.awt.Color(183, 219, 251));
         teacherTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -649,23 +701,71 @@ public class Teacher extends javax.swing.JFrame {
         teacherTable.setSelectionForeground(new java.awt.Color(183, 219, 251));
         jScrollPane2.setViewportView(teacherTable);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 730, 360));
+        idCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Student ID" }));
+        idCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idCBActionPerformed(evt);
+            }
+        });
 
-        jLabel11.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel11.setText("Student ID");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 81, -1));
+        nameCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Student Name" }));
+        nameCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameCBActionPerformed(evt);
+            }
+        });
 
-        jLabel30.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
-        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel30.setText("Student Name");
-        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 100, 20));
+        statusCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Status" }));
+        statusCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusCBActionPerformed(evt);
+            }
+        });
 
-        jLabel31.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
-        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel31.setText("Status");
-        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 81, 20));
+        dateCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Date" }));
+        dateCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateCBActionPerformed(evt);
+            }
+        });
 
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(idCB, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(nameCB, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(statusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dateCB, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 733, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(statusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Attendance", jPanel3);
+
+        getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 730, 440));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -675,15 +775,24 @@ public class Teacher extends javax.swing.JFrame {
 
     private void clearFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterActionPerformed
         // TODO add your handling code here:
-        try {
-            pst = conn.prepareStatement("SELECT * FROM attendance");
-            rs = pst.executeQuery();
-            
-            if(rs.next()) {
-                teacherTable.setModel(DbUtils.resultSetToTableModel(rs));
-            }
-        } catch (Exception e) {
-        }
+//        try {
+//            pst = conn.prepareStatement("SELECT * FROM attendance");
+//            rs = pst.executeQuery();
+//            
+//            if(rs.next()) {
+//                teacherTable.setModel(DbUtils.resultSetToTableModel(rs));
+//            }
+//        } catch (Exception e) {
+//        }
+       
+        sortGender.setSelectedIndex(0);
+        sortSection.setSelectedIndex(0);
+        idCB.setSelectedIndex(0);
+        nameCB.setSelectedIndex(0);
+        statusCB.setSelectedIndex(0);
+        dateCB.setSelectedIndex(0);
+        fillTable();
+        fillTable2();
     }//GEN-LAST:event_clearFilterActionPerformed
 
     private void idCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idCBActionPerformed
@@ -733,6 +842,7 @@ public class Teacher extends javax.swing.JFrame {
 
                 if (result==1) {
                     JOptionPane.showMessageDialog(this, "Student "+username+" Added SUCCESSFULLY!");
+                    fillTable2();
                 } else {
                     JOptionPane.showMessageDialog(this, "Adding Student "+username+" FAILED!");
                 }
@@ -810,6 +920,7 @@ public class Teacher extends javax.swing.JFrame {
             
             if (result==1) {
                 JOptionPane.showMessageDialog(this, username+"'s Information has been Updated!");
+                fillTable2();
             } else {
                 JOptionPane.showMessageDialog(this, "Updating "+username+"'s Information Failed!");
             }
@@ -888,6 +999,7 @@ public class Teacher extends javax.swing.JFrame {
                     
             if (result==1) {
                 JOptionPane.showMessageDialog(this, username+"'s Account has been Deleted!");
+                fillTable2();
             } else {
                 JOptionPane.showMessageDialog(this, "Deletion of "+username+"'s Account has Failed!");
             }
@@ -978,6 +1090,35 @@ public class Teacher extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_RCaddBtnActionPerformed
 
+    private void sortSectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortSectionActionPerformed
+        // TODO add your handling code here:
+           try {
+            String s = sortSection.getSelectedItem().toString();
+            pst = conn.prepareStatement("SELECT * FROM student WHERE section = ?");  
+            pst.setString(1, s);
+            rs2 = pst.executeQuery();
+            studentTablee.setModel(DbUtils.resultSetToTableModel(rs2)); 
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+    }//GEN-LAST:event_sortSectionActionPerformed
+
+    private void sortGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortGenderActionPerformed
+        // TODO add your handling code here:
+        try {
+            String s = sortGender.getSelectedItem().toString();
+            pst = conn.prepareStatement("SELECT * FROM student WHERE gender = ?");  
+            pst.setString(1, s);
+            rs2 = pst.executeQuery();
+            studentTablee.setModel(DbUtils.resultSetToTableModel(rs2)); 
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_sortGenderActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1048,9 +1189,7 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> dateCB;
     private javax.swing.JTextField genderTF1;
     private javax.swing.JComboBox<String> idCB;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -1070,27 +1209,31 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JComboBox<String> nameCB;
     private javax.swing.JButton removeBtn;
+    private javax.swing.JComboBox<String> sortGender;
+    private javax.swing.JComboBox<String> sortSection;
     private javax.swing.JComboBox<String> statusCB;
+    private javax.swing.JTable studentTablee;
     private javax.swing.JTable teacherTable;
     private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
