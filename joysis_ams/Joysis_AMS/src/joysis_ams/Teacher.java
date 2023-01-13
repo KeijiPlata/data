@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 
 /**
@@ -52,13 +53,24 @@ public class Teacher extends javax.swing.JFrame {
 //        teacherTable.setRowHeight(25);
         
     }
-     public void fillTable2(){
+    public void fillTable2(){
         try {
             pst = conn.prepareStatement("SELECT * FROM student");
             rs = pst.executeQuery();
-            
+            DefaultTableModel tbl = (DefaultTableModel)studentTablee.getModel();
+            tbl.setRowCount(0);
             while(rs.next()) {
-                studentTablee.setModel(DbUtils.resultSetToTableModel(rs));
+                String id = String.valueOf(rs.getInt("student_id"));
+                String username = rs.getString("username");  
+                String password = rs.getString("password"); 
+                String fname = rs.getString("firstname"); 
+                String mname = rs.getString("middlename"); 
+                String lname = rs.getString("lastname");
+                String section = rs.getString("section");
+                String gender = rs.getString("gender");
+
+                String data[] = {id, username, password, fname, mname, lname, section, gender};
+                tbl.addRow(data);
             }
         } catch (Exception e) {
         }
@@ -67,9 +79,17 @@ public class Teacher extends javax.swing.JFrame {
         try {
             pst = conn.prepareStatement("SELECT * FROM attendance");
             rs = pst.executeQuery();
-            
+            DefaultTableModel tbl = (DefaultTableModel)teacherTable.getModel();
+            tbl.setRowCount(0);
             while(rs.next()) {
-                teacherTable.setModel(DbUtils.resultSetToTableModel(rs));
+                String id = String.valueOf(rs.getInt("student_id"));
+                String name = rs.getString("name");  
+                String status = rs.getString("status");
+                String date = rs.getString("date");
+                String remarks = rs.getString("remarks");
+                
+                String data[] = {id, name, status, date, remarks};
+                tbl.addRow(data);
             }
         } catch (Exception e) {
         }
@@ -289,12 +309,13 @@ public class Teacher extends javax.swing.JFrame {
         nameCB = new javax.swing.JComboBox<>();
         statusCB = new javax.swing.JComboBox<>();
         dateCB = new javax.swing.JComboBox<>();
+        logout = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         genderTF1.setText("Gender");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(790, 675));
+        setMinimumSize(new java.awt.Dimension(790, 720));
         setPreferredSize(new java.awt.Dimension(790, 675));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -305,7 +326,7 @@ public class Teacher extends javax.swing.JFrame {
                 clearFilterActionPerformed(evt);
             }
         });
-        getContentPane().add(clearFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 10, 90, 30));
+        getContentPane().add(clearFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 90, 30));
 
         jPanel1.setBackground(new java.awt.Color(183, 219, 251));
 
@@ -640,7 +661,7 @@ public class Teacher extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Student ID", "Username", "Password", "Firstname", "Middlename", "Lastname", "Section", "Gender"
             }
         ));
         jScrollPane1.setViewportView(studentTablee);
@@ -686,13 +707,13 @@ public class Teacher extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Student", jPanel6);
 
-        teacherTable.setBackground(new java.awt.Color(183, 219, 251));
+        teacherTable.setBackground(new java.awt.Color(240, 240, 240));
         teacherTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Student ID", "Name", "Status", "Date", "Remarks"
             }
         ));
         teacherTable.setFocusable(false);
@@ -764,6 +785,14 @@ public class Teacher extends javax.swing.JFrame {
         jTabbedPane2.addTab("Attendance", jPanel3);
 
         getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 730, 460));
+
+        logout.setText("Logout");
+        logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 10, 90, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -1119,6 +1148,13 @@ public class Teacher extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_sortGenderActionPerformed
 
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
+        // TODO add your handling code here:
+        Role rl = new Role();
+        rl.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_logoutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1228,6 +1264,7 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JButton logout;
     private javax.swing.JComboBox<String> nameCB;
     private javax.swing.JButton removeBtn;
     private javax.swing.JComboBox<String> sortGender;
