@@ -145,9 +145,6 @@ public class Teacher extends javax.swing.JFrame {
 
         genderTF1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         statusCB = new javax.swing.JComboBox<>();
         nameCB = new javax.swing.JComboBox<>();
@@ -209,35 +206,23 @@ public class Teacher extends javax.swing.JFrame {
         removeBtn = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         teacherTable = new javax.swing.JTable();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
 
         genderTF1.setText("Gender");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
         jLabel1.setText("Teacher Name");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 14, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Status");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 44, 112, -1));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Student Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Date");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 44, 108, -1));
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Student ID");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 44, 81, -1));
+        jLabel5.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel5.setText("Date");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 81, -1));
 
         statusCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         statusCB.addActionListener(new java.awt.event.ActionListener() {
@@ -245,7 +230,7 @@ public class Teacher extends javax.swing.JFrame {
                 statusCBActionPerformed(evt);
             }
         });
-        getContentPane().add(statusCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(273, 72, 112, -1));
+        getContentPane().add(statusCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 112, 20));
 
         nameCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         nameCB.addActionListener(new java.awt.event.ActionListener() {
@@ -253,7 +238,7 @@ public class Teacher extends javax.swing.JFrame {
                 nameCBActionPerformed(evt);
             }
         });
-        getContentPane().add(nameCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 72, 125, -1));
+        getContentPane().add(nameCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 125, -1));
 
         idCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         idCB.addActionListener(new java.awt.event.ActionListener() {
@@ -261,7 +246,7 @@ public class Teacher extends javax.swing.JFrame {
                 idCBActionPerformed(evt);
             }
         });
-        getContentPane().add(idCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 72, 81, -1));
+        getContentPane().add(idCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 110, -1));
 
         dateCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         dateCB.addActionListener(new java.awt.event.ActionListener() {
@@ -269,7 +254,7 @@ public class Teacher extends javax.swing.JFrame {
                 dateCBActionPerformed(evt);
             }
         });
-        getContentPane().add(dateCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 72, 108, -1));
+        getContentPane().add(dateCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 108, 20));
 
         clearFilter.setText("Clear Filter");
         clearFilter.addActionListener(new java.awt.event.ActionListener() {
@@ -277,37 +262,42 @@ public class Teacher extends javax.swing.JFrame {
                 clearFilterActionPerformed(evt);
             }
         });
-        getContentPane().add(clearFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(673, 71, 90, -1));
-
-        AusernameTF.setText("jTextField1");
+        getContentPane().add(clearFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, 90, 30));
 
         jLabel6.setText("Username");
 
-        ApasswordTF.setText("jTextField1");
+        ApasswordTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApasswordTFActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Password");
 
-        AfirstnameTF.setText("jTextField1");
+        AfirstnameTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AfirstnameTFActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("First Name");
 
-        AmiddlenameTF.setText("jTextField1");
+        AmiddlenameTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AmiddlenameTFActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("Middle Name");
 
-        AlastnameTF.setText("jTextField1");
-
         jLabel10.setText("Last Name");
 
-        AsectionTF.setText("jTextField1");
-
         jLabel12.setText("Section");
-
-        AgenderTF.setText("jTextField1");
 
         jLabel13.setText("Gender");
 
         addBtn.setText("Add");
+        addBtn.setPreferredSize(new java.awt.Dimension(67, 23));
         addBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtnActionPerformed(evt);
@@ -385,42 +375,30 @@ public class Teacher extends javax.swing.JFrame {
 
         jLabel14.setText("Student ID");
         jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 19));
-
-        EusernameTF.setText("jTextField1");
-        jPanel4.add(EusernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 138, 29));
+        jPanel4.add(EusernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 138, 29));
 
         jLabel15.setText("Username");
-        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 138, 19));
-
-        EfirstnameTF.setText("jTextField1");
-        jPanel4.add(EfirstnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, 138, 29));
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 138, 19));
+        jPanel4.add(EfirstnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 138, 29));
 
         jLabel16.setText("First Name");
-        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 67, 138, 19));
-
-        EmiddlenameTF.setText("jTextField1");
-        jPanel4.add(EmiddlenameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 92, 138, 29));
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 138, 19));
+        jPanel4.add(EmiddlenameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 138, 29));
 
         jLabel17.setText("Middle Name");
-        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 67, 138, 19));
-
-        ElastnameTF.setText("jTextField1");
-        jPanel4.add(ElastnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 92, 138, 29));
+        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 138, 19));
+        jPanel4.add(ElastnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 138, 29));
 
         jLabel18.setText("Last Name");
-        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 67, 138, 19));
-
-        EpasswordTF.setText("jTextField1");
-        jPanel4.add(EpasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 138, 29));
+        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 138, 19));
+        jPanel4.add(EpasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 138, 29));
 
         jLabel19.setText("Password");
-        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 138, 19));
-
-        EsectionTF.setText("jTextField1");
-        jPanel4.add(EsectionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 138, 29));
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 138, 19));
+        jPanel4.add(EsectionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, 138, 29));
 
         jLabel20.setText("Section");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 138, 19));
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 138, 19));
 
         EidCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         EidCB.addActionListener(new java.awt.event.ActionListener() {
@@ -428,13 +406,11 @@ public class Teacher extends javax.swing.JFrame {
                 EidCBActionPerformed(evt);
             }
         });
-        jPanel4.add(EidCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 30));
-
-        EgenderTF.setText("jTextField1");
-        jPanel4.add(EgenderTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 138, 29));
+        jPanel4.add(EidCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 90, 30));
+        jPanel4.add(EgenderTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 138, 29));
 
         jLabel28.setText("Gender");
-        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 138, 19));
+        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, 138, 19));
 
         updateBtn.setText("Update");
         updateBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -442,7 +418,7 @@ public class Teacher extends javax.swing.JFrame {
                 updateBtnActionPerformed(evt);
             }
         });
-        jPanel4.add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
+        jPanel4.add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 80, 30));
 
         jTabbedPane1.addTab("Edit Student", jPanel4);
 
@@ -450,42 +426,30 @@ public class Teacher extends javax.swing.JFrame {
 
         jLabel21.setText("Student ID");
         jPanel5.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 19));
-
-        RusernameTF.setText("jTextField1");
-        jPanel5.add(RusernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 138, 29));
+        jPanel5.add(RusernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 138, 29));
 
         jLabel22.setText("Username");
-        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 138, 19));
-
-        RfirstnameTF.setText("jTextField1");
-        jPanel5.add(RfirstnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 92, 138, 29));
+        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 138, 19));
+        jPanel5.add(RfirstnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 138, 29));
 
         jLabel23.setText("First Name");
-        jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 67, 138, 19));
-
-        RmiddlenameTF.setText("jTextField1");
-        jPanel5.add(RmiddlenameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 92, 138, 29));
+        jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 138, 19));
+        jPanel5.add(RmiddlenameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 138, 29));
 
         jLabel24.setText("Middle Name");
-        jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 67, 138, 19));
-
-        RlastnameTF.setText("jTextField1");
-        jPanel5.add(RlastnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 92, 138, 29));
+        jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 138, 19));
+        jPanel5.add(RlastnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 138, 29));
 
         jLabel25.setText("Last Name");
-        jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 67, 138, 19));
-
-        RpasswordTF.setText("jTextField1");
-        jPanel5.add(RpasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 138, 29));
+        jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 138, 20));
+        jPanel5.add(RpasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 138, 29));
 
         jLabel26.setText("Password");
-        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 138, 19));
-
-        RsectionTF.setText("jTextField1");
-        jPanel5.add(RsectionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 138, 29));
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 138, 19));
+        jPanel5.add(RsectionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, 138, 29));
 
         jLabel27.setText("Section");
-        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 138, 19));
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 138, 19));
 
         RidCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         RidCB.addActionListener(new java.awt.event.ActionListener() {
@@ -493,13 +457,11 @@ public class Teacher extends javax.swing.JFrame {
                 RidCBActionPerformed(evt);
             }
         });
-        jPanel5.add(RidCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 30));
-
-        RgenderTF.setText("jTextField1");
-        jPanel5.add(RgenderTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 138, 29));
+        jPanel5.add(RidCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 90, 30));
+        jPanel5.add(RgenderTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 138, 29));
 
         jLabel29.setText("Gender");
-        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 138, 19));
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, 138, 19));
 
         removeBtn.setText("Remove");
         removeBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -507,7 +469,7 @@ public class Teacher extends javax.swing.JFrame {
                 removeBtnActionPerformed(evt);
             }
         });
-        jPanel5.add(removeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
+        jPanel5.add(removeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 80, 30));
 
         jTabbedPane1.addTab("Remove Student", jPanel5);
 
@@ -523,7 +485,22 @@ public class Teacher extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(teacherTable);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 730, 260));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 730, 360));
+
+        jLabel11.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel11.setText("Student ID");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 81, -1));
+
+        jLabel30.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel30.setText("Student Name");
+        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 100, 20));
+
+        jLabel31.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel31.setText("Status");
+        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 81, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -740,6 +717,18 @@ public class Teacher extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_removeBtnActionPerformed
 
+    private void ApasswordTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApasswordTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ApasswordTFActionPerformed
+
+    private void AfirstnameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AfirstnameTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AfirstnameTFActionPerformed
+
+    private void AmiddlenameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AmiddlenameTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AmiddlenameTFActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -806,6 +795,7 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> idCB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -814,7 +804,6 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -825,8 +814,8 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
