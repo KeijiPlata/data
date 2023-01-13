@@ -871,6 +871,7 @@ public class Teacher extends javax.swing.JFrame {
 
                 if (result==1) {
                     JOptionPane.showMessageDialog(this, "Student "+username+" Added SUCCESSFULLY!");
+                    fillID2();
                     fillTable2();
                 } else {
                     JOptionPane.showMessageDialog(this, "Adding Student "+username+" FAILED!");
@@ -949,6 +950,7 @@ public class Teacher extends javax.swing.JFrame {
             
             if (result==1) {
                 JOptionPane.showMessageDialog(this, username+"'s Information has been Updated!");
+                fillID2();
                 fillTable2();
             } else {
                 JOptionPane.showMessageDialog(this, "Updating "+username+"'s Information Failed!");
@@ -1028,6 +1030,7 @@ public class Teacher extends javax.swing.JFrame {
                     
             if (result==1) {
                 JOptionPane.showMessageDialog(this, username+"'s Account has been Deleted!");
+                fillID2();
                 fillTable2();
             } else {
                 JOptionPane.showMessageDialog(this, "Deletion of "+username+"'s Account has Failed!");
@@ -1110,6 +1113,7 @@ public class Teacher extends javax.swing.JFrame {
 
                 if (result==1) {
                     JOptionPane.showMessageDialog(this, "Attendance of "+fullname+" SUCCESSFULLY Added!");
+                    fillTable();
                 } else {
                     JOptionPane.showMessageDialog(this, "Adding Student "+fullname+"'s Attendance FAILED!");
                 }
