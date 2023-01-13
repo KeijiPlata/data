@@ -3,18 +3,93 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package joysis_ams;
-
+import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author JAYCEE
  */
 public class Student extends javax.swing.JFrame {
+    static String viewqry;
+    static String strDate ;
+     public void qryDate(String Date){
+         try{
+            String db = "jdbc:mysql://localhost:3306/joysis_ams";
+            Connection conn = DriverManager.getConnection(db, "root", null);
+            String qry = "SELECT * FROM attendance WHERE date = ?";
+            PreparedStatement ps = conn.prepareStatement(qry);
+            ps.setString(1, Date);
+            ResultSet rslt = ps.executeQuery();
+            DefaultTableModel tbl = (DefaultTableModel)jtbl.getModel();
+            tbl.setRowCount(0);
+            while(rslt.next()){
+                String date = rslt.getString("date");
+                String stats = rslt.getString("status");
+                String remarks = rslt.getString("remarks");
+                
+                String data[] = {date, stats, remarks};
+                tbl.addRow(data);
+            }
+            
+         }
+         catch(Exception a){
+            JOptionPane.showMessageDialog(null, a);
+            a.printStackTrace();
+         }
+     }
+     public void viewTable(String qry, String id){
+          try{
+            String db = "jdbc:mysql://localhost:3306/joysis_ams";
+            Connection conn = DriverManager.getConnection(db, "root", null);
+            PreparedStatement ps = conn.prepareStatement(qry);
+            ps.setString(1, id);
+            ResultSet rslt = ps.executeQuery();
+            DefaultTableModel tbl = (DefaultTableModel)jtbl.getModel();
+            tbl.setRowCount(0);
+            while(rslt.next()){
+                String date = rslt.getString("date");
+                String stats = rslt.getString("status");
+                String remarks = rslt.getString("remarks");
+                
+                String data[] = {date, stats, remarks};
+                tbl.addRow(data);
+            }
+         }
+         catch(Exception a){
+            JOptionPane.showMessageDialog(null, a);
+            a.printStackTrace();
+         }
 
+     }
+
+     public void ComboBoxqry(){
+        String selected = studentstatus.getSelectedItem().toString();
+         switch(selected){
+             case "Present":
+                 viewqry = "SELECT * FROM attendance WHERE student_id = ? AND status = 'Present'";
+                 break;
+             case "Absent":
+                 viewqry = "SELECT * FROM attendance  WHERE student_id = ? AND status = 'Absent'";
+                 break;
+                 
+             case "Late":
+                 viewqry = "SELECT * FROM attendance  WHERE student_id = ? AND status = 'Late'";
+                 break;
+                 
+             default:
+                 viewqry = "SELECT * FROM attendance  WHERE student_id = ?";
+                 break;        
+         }
+     }
     /**
      * Creates new form Student
      */
     public Student() {
         initComponents();
+         
     }
 
     /**
@@ -31,12 +106,15 @@ public class Student extends javax.swing.JFrame {
         studentId = new javax.swing.JLabel();
         studentSection = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jtbl = new javax.swing.JTable();
+        studentDate = new com.toedter.calendar.JDateChooser();
+        studentstatus = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
@@ -51,17 +129,16 @@ public class Student extends javax.swing.JFrame {
         });
 
         studentId.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        studentId.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         studentId.setText("(Student ID)");
 
-        studentSection.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        studentSection.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         studentSection.setText("Section");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtbl.setForeground(new java.awt.Color(102, 255, 102));
+        jtbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Date", "Status", "Remarks"
@@ -75,9 +152,22 @@ public class Student extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jtbl.setToolTipText("");
+        jScrollPane1.setViewportView(jtbl);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Present", "Late", "Absent" }));
+        studentDate.setDateFormatString("yyyy-mm-dd");
+        studentDate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                studentDateMouseClicked(evt);
+            }
+        });
+
+        studentstatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Present", "Late", "Absent" }));
+        studentstatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                studentstatusActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -90,14 +180,14 @@ public class Student extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(studentName)
-                            .addComponent(jComboBox2, 0, 104, Short.MAX_VALUE))
+                            .addComponent(studentstatus, 0, 104, Short.MAX_VALUE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(studentDate, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(152, 152, 152)
+                                .addGap(2, 2, 2)
                                 .addComponent(studentId)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(studentSection)))))
@@ -111,13 +201,13 @@ public class Student extends javax.swing.JFrame {
                     .addComponent(studentName)
                     .addComponent(studentId)
                     .addComponent(studentSection))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(studentDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(studentstatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -128,7 +218,9 @@ public class Student extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -139,15 +231,41 @@ public class Student extends javax.swing.JFrame {
         login lg = new login();
         ConnectionDB cdb = new ConnectionDB();
         String username = lg.username1;
+        String studentid = Integer.toString(cdb.id);
         cdb.getUsername(username);
+        ComboBoxqry();
+        viewTable(viewqry, studentid);
         studentName.setText(cdb.fname + " " + cdb.mname + " " + cdb.lname);
         studentId.setText(Integer.toString(cdb.id));
         studentSection.setText(cdb.sec);
+     
     }//GEN-LAST:event_formWindowOpened
 
     private void studentNameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_studentNameMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_studentNameMouseClicked
+
+    private void studentstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentstatusActionPerformed
+        // TODO add your handling code here:
+        login lg = new login();
+        ConnectionDB cdb = new ConnectionDB();
+        String username = lg.username1;
+        String studentid = Integer.toString(cdb.id);
+        cdb.getUsername(username);
+        ComboBoxqry();
+        viewTable(viewqry, studentid);
+    }//GEN-LAST:event_studentstatusActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+     
+        
+    }//GEN-LAST:event_formWindowActivated
+
+    private void studentDateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_studentDateMouseClicked
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_studentDateMouseClicked
 
     /**
      * @param args the command line arguments
@@ -185,13 +303,13 @@ public class Student extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jtbl;
+    private com.toedter.calendar.JDateChooser studentDate;
     private javax.swing.JLabel studentId;
     private javax.swing.JLabel studentName;
     private javax.swing.JLabel studentSection;
+    private javax.swing.JComboBox<String> studentstatus;
     // End of variables declaration//GEN-END:variables
 }
