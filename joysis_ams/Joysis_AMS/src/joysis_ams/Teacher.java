@@ -4,14 +4,13 @@
  */
 package joysis_ams;
 
-import java.awt.Color;
-import java.awt.Font;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -128,10 +127,37 @@ public class Teacher extends javax.swing.JFrame {
                 String name = rs.getString("student_id");
                 EidCB.addItem(name);
                 RidCB.addItem(name);
+                RCidCB.addItem(name);
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
+    }
+    
+    public void ResetTF() {
+        RusernameTF.setText("");
+        RpasswordTF.setText("");
+        RsectionTF.setText("");
+        RgenderTF.setText("");
+        RfirstnameTF.setText("");
+        RmiddlenameTF.setText("");
+        RlastnameTF.setText("");
+        
+        EusernameTF.setText("");
+        EpasswordTF.setText("");
+        EsectionTF.setText("");
+        EgenderTF.setText("");
+        EfirstnameTF.setText("");
+        EmiddlenameTF.setText("");
+        ElastnameTF.setText("");
+        
+        AusernameTF.setText("");
+        ApasswordTF.setText("");
+        AsectionTF.setText("");
+        AgenderTF.setText("");
+        AfirstnameTF.setText("");
+        AmiddlenameTF.setText("");
+        AlastnameTF.setText("");
     }
 
     /**
@@ -204,15 +230,31 @@ public class Teacher extends javax.swing.JFrame {
         RgenderTF = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         removeBtn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        RCidCB = new javax.swing.JComboBox<>();
+        jLabel32 = new javax.swing.JLabel();
+        RCfullnameTF = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        RCremarksTF = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        RCaddBtn = new javax.swing.JButton();
+        RCdate = new com.toedter.calendar.JDateChooser();
+        RCstatusTF = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         teacherTable = new javax.swing.JTable();
         jLabel11 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         genderTF1.setText("Gender");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(790, 675));
+        setPreferredSize(new java.awt.Dimension(790, 675));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 16)); // NOI18N
@@ -263,6 +305,8 @@ public class Teacher extends javax.swing.JFrame {
             }
         });
         getContentPane().add(clearFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, 90, 30));
+
+        jPanel1.setBackground(new java.awt.Color(183, 219, 251));
 
         jLabel6.setText("Username");
 
@@ -371,6 +415,7 @@ public class Teacher extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Add Student", jPanel1);
 
+        jPanel4.setBackground(new java.awt.Color(183, 219, 251));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel14.setText("Student ID");
@@ -422,30 +467,43 @@ public class Teacher extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Edit Student", jPanel4);
 
+        jPanel5.setBackground(new java.awt.Color(183, 219, 251));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel21.setText("Student ID");
         jPanel5.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 19));
+
+        RusernameTF.setEditable(false);
         jPanel5.add(RusernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 138, 29));
 
         jLabel22.setText("Username");
         jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 138, 19));
+
+        RfirstnameTF.setEditable(false);
         jPanel5.add(RfirstnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 138, 29));
 
         jLabel23.setText("First Name");
         jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 138, 19));
+
+        RmiddlenameTF.setEditable(false);
         jPanel5.add(RmiddlenameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 138, 29));
 
         jLabel24.setText("Middle Name");
         jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 138, 19));
+
+        RlastnameTF.setEditable(false);
         jPanel5.add(RlastnameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 138, 29));
 
         jLabel25.setText("Last Name");
         jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 138, 20));
+
+        RpasswordTF.setEditable(false);
         jPanel5.add(RpasswordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 138, 29));
 
         jLabel26.setText("Password");
         jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 138, 19));
+
+        RsectionTF.setEditable(false);
         jPanel5.add(RsectionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, 138, 29));
 
         jLabel27.setText("Section");
@@ -458,6 +516,8 @@ public class Teacher extends javax.swing.JFrame {
             }
         });
         jPanel5.add(RidCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 90, 30));
+
+        RgenderTF.setEditable(false);
         jPanel5.add(RgenderTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 138, 29));
 
         jLabel29.setText("Gender");
@@ -473,8 +533,108 @@ public class Teacher extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Remove Student", jPanel5);
 
+        jPanel2.setBackground(new java.awt.Color(183, 219, 251));
+
+        RCidCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        RCidCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RCidCBActionPerformed(evt);
+            }
+        });
+
+        jLabel32.setText("Student ID");
+
+        RCfullnameTF.setEditable(false);
+
+        jLabel33.setText("Date");
+
+        jLabel34.setText("Status");
+
+        jLabel35.setText("Fullname");
+
+        jLabel36.setText("Remarks");
+
+        RCaddBtn.setText("Add");
+        RCaddBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RCaddBtnActionPerformed(evt);
+            }
+        });
+
+        RCdate.setDateFormatString("yyyy-MM-dd");
+        RCdate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RCdateMouseClicked(evt);
+            }
+        });
+
+        RCstatusTF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Present", "Absent", "Late" }));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RCidCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(148, 148, 148)
+                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(RCfullnameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RCstatusTF, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RCdate, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)))
+                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RCremarksTF))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(RCaddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(RCfullnameTF, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                            .addComponent(RCdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RCstatusTF)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(RCidCB, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(RCaddBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RCremarksTF, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Roll Call", jPanel2);
+
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 730, 160));
 
+        teacherTable.setBackground(new java.awt.Color(183, 219, 251));
         teacherTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -483,6 +643,10 @@ public class Teacher extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        teacherTable.setFocusable(false);
+        teacherTable.setGridColor(new java.awt.Color(183, 219, 251));
+        teacherTable.setSelectionBackground(new java.awt.Color(183, 219, 251));
+        teacherTable.setSelectionForeground(new java.awt.Color(183, 219, 251));
         jScrollPane2.setViewportView(teacherTable);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 730, 360));
@@ -502,7 +666,12 @@ public class Teacher extends javax.swing.JFrame {
         jLabel31.setText("Status");
         getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 81, 20));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Download\\AMS_Background.png")); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void clearFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFilterActionPerformed
@@ -537,30 +706,38 @@ public class Teacher extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             String username = AusernameTF.getText();
-            String password = ApasswordTF.getText();
-            String firstname = AfirstnameTF.getText();
-            String middlename = AmiddlenameTF.getText();
-            String lastname = AlastnameTF.getText();
-            String section = AsectionTF.getText();
-            String gender = AgenderTF.getText();
             
-            pst = conn.prepareStatement("INSERT INTO student (username,password,firstname,middlename,lastname,section,gender) VALUES (?,?,?,?,?,?,?)");
+            pst = conn.prepareStatement("SELECT * FROM student WHERE username = ?");
             pst.setString(1,username);
-            pst.setString(2,password);
-            pst.setString(3,firstname);
-            pst.setString(4,middlename);
-            pst.setString(5,lastname);
-            pst.setString(6,section);
-            pst.setString(7,gender);
+            rs = pst.executeQuery();
             
-            int result = pst.executeUpdate();
-            
-            if (result==1) {
-                JOptionPane.showMessageDialog(this, "Student "+username+" Added SUCCESSFULLY!");
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(this, "Username Already Taken!");
             } else {
-                JOptionPane.showMessageDialog(this, "Adding Student "+username+" FAILED!");
+                String password = ApasswordTF.getText();
+                String firstname = AfirstnameTF.getText();
+                String middlename = AmiddlenameTF.getText();
+                String lastname = AlastnameTF.getText();
+                String section = AsectionTF.getText();
+                String gender = AgenderTF.getText();
+
+                pst = conn.prepareStatement("INSERT INTO student (username,password,firstname,middlename,lastname,section,gender) VALUES (?,?,?,?,?,?,?)");
+                pst.setString(1,username);
+                pst.setString(2,password);
+                pst.setString(3,firstname);
+                pst.setString(4,middlename);
+                pst.setString(5,lastname);
+                pst.setString(6,section);
+                pst.setString(7,gender);
+                int result = pst.executeUpdate();
+                ResetTF();
+
+                if (result==1) {
+                    JOptionPane.showMessageDialog(this, "Student "+username+" Added SUCCESSFULLY!");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Adding Student "+username+" FAILED!");
+                }
             }
-            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
@@ -630,6 +807,7 @@ public class Teacher extends javax.swing.JFrame {
             pst.setString(7,gender);
             pst.setString(8,id);
             int result = pst.executeUpdate();
+            ResetTF();
             
             if (result==1) {
                 JOptionPane.showMessageDialog(this, username+"'s Information has been Updated!");
@@ -707,7 +885,8 @@ public class Teacher extends javax.swing.JFrame {
             pst = conn.prepareStatement("DELETE FROM `student` WHERE student_id = ?");
             pst.setString(1,id);
             int result = pst.executeUpdate();
-            
+            ResetTF();
+                    
             if (result==1) {
                 JOptionPane.showMessageDialog(this, username+"'s Account has been Deleted!");
             } else {
@@ -728,6 +907,77 @@ public class Teacher extends javax.swing.JFrame {
     private void AmiddlenameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AmiddlenameTFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AmiddlenameTFActionPerformed
+
+    private void RCdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RCdateMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_RCdateMouseClicked
+
+    private void RCidCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RCidCBActionPerformed
+        // TODO add your handling code here:
+        try {
+            pst = conn.prepareStatement("SELECT student_id FROM student");
+            rs = pst.executeQuery();
+            
+            if (rs.next()) {
+                String id = RCidCB.getSelectedItem().toString();
+
+                pst = conn.prepareStatement("SELECT * FROM student WHERE student_id = ?");
+                pst.setString(1, id);
+                rs = pst.executeQuery();
+
+                if (rs.next()==true) {
+                    String firstname = rs.getString("firstname");
+                    String middlename = rs.getString("middlename");
+                    String lastname = rs.getString("lastname");
+                    RCfullnameTF.setText(firstname+" "+middlename+" "+lastname);
+                } else {
+                    JOptionPane.showMessageDialog(this, "No Record Found!");
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_RCidCBActionPerformed
+
+    private void RCaddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RCaddBtnActionPerformed
+        // TODO add your handling code here:
+        try {
+            String fullname = RCfullnameTF.getText();
+            
+            pst = conn.prepareStatement("SELECT * FROM student WHERE username = ?");
+            pst.setString(1,fullname);
+            rs = pst.executeQuery();
+            
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(this, "Username Already Taken!");
+            } else {
+                String id = RCidCB.getSelectedItem().toString();
+                String status = RCstatusTF.getSelectedItem().toString();
+                
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                String date = sdf.format(RCdate.getDate());
+                
+                String remarks = RCremarksTF.getText();
+
+                pst = conn.prepareStatement("INSERT INTO attendance (student_id,name,status,date,remarks) VALUES (?,?,?,?,?)");
+                pst.setString(1,id);
+                pst.setString(2,fullname);
+                pst.setString(3,status);
+                pst.setString(4,date);
+                pst.setString(5,remarks);
+                int result = pst.executeUpdate();
+                ResetTF();
+
+                if (result==1) {
+                    JOptionPane.showMessageDialog(this, "Attendance of "+fullname+" SUCCESSFULLY Added!");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Adding Student "+fullname+"'s Attendance FAILED!");
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_RCaddBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -780,6 +1030,12 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JTextField EpasswordTF;
     private javax.swing.JTextField EsectionTF;
     private javax.swing.JTextField EusernameTF;
+    private javax.swing.JButton RCaddBtn;
+    private com.toedter.calendar.JDateChooser RCdate;
+    private javax.swing.JTextField RCfullnameTF;
+    private javax.swing.JComboBox<String> RCidCB;
+    private javax.swing.JTextField RCremarksTF;
+    private javax.swing.JComboBox<String> RCstatusTF;
     private javax.swing.JTextField RfirstnameTF;
     private javax.swing.JTextField RgenderTF;
     private javax.swing.JComboBox<String> RidCB;
@@ -804,6 +1060,7 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -816,12 +1073,18 @@ public class Teacher extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;

@@ -2036,3 +2036,288 @@ Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribut
 2023-01-13  9:40:33 0 [Note] InnoDB: Loading buffer pool(s) from C:\xampp\mysql\data\ib_buffer_pool
 2023-01-13  9:40:33 0 [Note] Plugin 'FEEDBACK' is disabled.
 2023-01-13  9:40:34 0 [Note] Server socket created on IP: '::'.
+2023-01-13 10:40:16 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-01-13 10:40:16 0 [Note] InnoDB: Uses event mutexes
+2023-01-13 10:40:16 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+2023-01-13 10:40:16 0 [Note] InnoDB: Number of pools: 1
+2023-01-13 10:40:16 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2023-01-13 10:40:16 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2023-01-13 10:40:16 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-01-13 10:40:19 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=523477
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try1\trial1tb.ibd' OS error: 203
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 10:40:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try1`.`trial1tb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 10:40:22 0 [Warning] InnoDB: Ignoring tablespace for `try1`.`trial1tb` because it could not be opened.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\loginstudent.ibd' OS error: 203
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 10:40:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`loginstudent``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 10:40:22 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`loginstudent` because it could not be opened.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\personalinfo.ibd' OS error: 203
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 10:40:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`personalinfo``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 10:40:22 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`personalinfo` because it could not be opened.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\trydb.ibd' OS error: 203
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 10:40:22 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 10:40:22 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`trydb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 10:40:22 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`trydb` because it could not be opened.
+2023-01-13 10:40:22 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2023-01-13 10:40:22 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-01-13 10:40:22 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-01-13 10:40:22 0 [Note] InnoDB: Setting file 'D:\Applications\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2023-01-13 10:40:22 0 [Note] InnoDB: File 'D:\Applications\xampp\mysql\data\ibtmp1' size is now 12 MB.
+2023-01-13 10:40:22 0 [Note] InnoDB: Waiting for purge to start
+2023-01-13 10:40:22 0 [Note] InnoDB: 10.4.27 started; log sequence number 523486; transaction id 1354
+2023-01-13 10:40:22 0 [Note] InnoDB: Loading buffer pool(s) from D:\Applications\xampp\mysql\data\ib_buffer_pool
+2023-01-13 10:40:22 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-01-13 10:40:22 0 [Note] Server socket created on IP: '::'.
+2023-01-13 10:40:22 0 [Note] Reading of all Master_info entries succeeded
+2023-01-13 10:40:22 0 [Note] Added new Master_info '' to hash table
+2023-01-13 10:40:22 0 [Note] D:\applications\xampp\mysql\bin\mysqld.exe: ready for connections.
+Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2023-01-13 10:40:22 0 [Note] InnoDB: Buffer pool(s) load completed at 230113 10:40:22
+2023-01-13 10:41:13 10 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:16 12 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:16 14 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:16 16 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:17 22 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:18 24 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:19 26 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:20 28 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:22 30 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:41:22 32 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:42:51 8 [Warning] Aborted connection 8 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 10:43:54 35 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:43:55 37 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:43:57 39 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:43:58 41 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:43:58 43 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:43:58 45 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:43:58 47 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:43:59 49 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:07 51 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:07 53 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:08 55 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:08 57 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:10 59 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:10 61 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:19 63 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:20 65 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:20 67 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:20 69 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:20 71 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:20 73 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:45 75 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:46 77 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:46 79 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:46 81 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:47 83 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:44:47 85 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:45:34 87 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:45:35 89 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:45:35 91 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:45:35 93 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:45:35 95 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:45:35 97 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:45:41 33 [Warning] Aborted connection 33 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 10:46:02 98 [Warning] Aborted connection 98 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 10:47:13 99 [Warning] Aborted connection 99 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 10:48:07 100 [Warning] Aborted connection 100 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 10:48:44 101 [Warning] Aborted connection 101 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 10:52:13 104 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:52:14 106 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:52:14 108 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:52:14 110 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:52:14 112 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:52:15 114 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:53:54 116 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:53:54 118 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:53:55 120 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:53:56 122 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:53:56 124 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:53:56 126 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:53:56 128 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:53:57 130 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:54:10 132 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:54:10 134 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:54:10 136 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:54:24 138 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:54:24 140 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 10:54:32 102 [Warning] Aborted connection 102 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 10:59:48 141 [Warning] Aborted connection 141 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:00:42 142 [Warning] Aborted connection 142 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:01:18 143 [Warning] Aborted connection 143 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:03:16 145 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:16 147 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:17 149 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:17 151 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:43 0 [Note] D:\applications\xampp\mysql\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2023-01-13 11:03:43 0 [Note] Event Scheduler: Purging the queue. 0 events
+2023-01-13 11:03:43 0 [Note] InnoDB: FTS optimize thread exiting.
+2023-01-13 11:03:43 0 [Note] InnoDB: Starting shutdown...
+2023-01-13 11:03:43 0 [Note] InnoDB: Dumping buffer pool(s) to D:\Applications\xampp\mysql\data\ib_buffer_pool
+2023-01-13 11:03:43 0 [Note] InnoDB: Instance 0, restricted to 250 pages due to innodb_buf_pool_dump_pct=25
+2023-01-13 11:03:43 0 [Note] InnoDB: Buffer pool(s) dump completed at 230113 11:03:43
+2023-01-13 11:03:44 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-01-13 11:03:44 0 [Note] InnoDB: Shutdown completed; log sequence number 534188; transaction id 1411
+2023-01-13 11:03:44 0 [Note] D:\applications\xampp\mysql\bin\mysqld.exe: Shutdown complete
+
+2023-01-13 11:03:47 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-01-13 11:03:47 0 [Note] InnoDB: Uses event mutexes
+2023-01-13 11:03:47 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+2023-01-13 11:03:47 0 [Note] InnoDB: Number of pools: 1
+2023-01-13 11:03:47 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2023-01-13 11:03:47 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2023-01-13 11:03:47 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try1\trial1tb.ibd' OS error: 203
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 11:03:48 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try1`.`trial1tb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 11:03:48 0 [Warning] InnoDB: Ignoring tablespace for `try1`.`trial1tb` because it could not be opened.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\loginstudent.ibd' OS error: 203
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 11:03:48 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`loginstudent``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 11:03:48 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`loginstudent` because it could not be opened.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\personalinfo.ibd' OS error: 203
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 11:03:48 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`personalinfo``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 11:03:48 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`personalinfo` because it could not be opened.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\try2\trydb.ibd' OS error: 203
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-01-13 11:03:48 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-01-13 11:03:48 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``try2`.`trydb``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-01-13 11:03:48 0 [Warning] InnoDB: Ignoring tablespace for `try2`.`trydb` because it could not be opened.
+2023-01-13 11:03:48 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2023-01-13 11:03:48 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-01-13 11:03:48 0 [Note] InnoDB: Setting file 'D:\Applications\xampp\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2023-01-13 11:03:48 0 [Note] InnoDB: File 'D:\Applications\xampp\mysql\data\ibtmp1' size is now 12 MB.
+2023-01-13 11:03:48 0 [Note] InnoDB: Waiting for purge to start
+2023-01-13 11:03:48 0 [Note] InnoDB: 10.4.27 started; log sequence number 534188; transaction id 1412
+2023-01-13 11:03:48 0 [Note] InnoDB: Loading buffer pool(s) from D:\Applications\xampp\mysql\data\ib_buffer_pool
+2023-01-13 11:03:48 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-01-13 11:03:48 0 [Note] Server socket created on IP: '::'.
+2023-01-13 11:03:48 0 [Note] Reading of all Master_info entries succeeded
+2023-01-13 11:03:48 0 [Note] Added new Master_info '' to hash table
+2023-01-13 11:03:48 0 [Note] D:\applications\xampp\mysql\bin\mysqld.exe: ready for connections.
+Version: '10.4.27-MariaDB'  socket: ''  port: 3306  mariadb.org binary distribution
+2023-01-13 11:03:48 0 [Note] InnoDB: Buffer pool(s) load completed at 230113 11:03:48
+2023-01-13 11:03:53 9 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:55 11 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:55 13 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:55 15 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:55 17 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:55 19 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:58 21 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:59 23 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:59 25 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:59 27 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:59 29 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:03:59 31 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:04:48 33 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:04:49 35 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:04:49 37 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:04:49 39 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:04:49 41 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:04:49 43 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:22 45 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:23 47 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:23 49 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:23 51 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:24 57 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:25 59 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:25 61 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:25 63 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:25 65 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:27 67 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:27 69 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:27 71 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:28 73 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:30 75 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:31 77 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:31 79 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:32 81 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:32 83 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:05:32 85 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:10 88 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:10 90 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:11 92 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:11 94 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:11 96 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:11 98 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:26 100 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:26 102 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:34 104 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:34 106 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:49 108 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:07:49 110 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:08:01 112 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:08:31 114 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:08:32 116 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:08:32 118 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:08:33 120 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:08:33 122 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:08:33 124 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:09:06 126 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:09:07 128 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:09:07 130 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:09:07 132 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:09:07 134 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:09:08 136 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:09:16 86 [Warning] Aborted connection 86 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:13:51 137 [Warning] Aborted connection 137 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:15:21 138 [Warning] Aborted connection 138 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:16:29 140 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:16:30 142 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:23:19 143 [Warning] Aborted connection 143 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:23:55 144 [Warning] Aborted connection 144 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:28:09 145 [Warning] Aborted connection 145 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:28:26 146 [Warning] Aborted connection 146 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:29:23 147 [Warning] Aborted connection 147 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:29:50 148 [Warning] Aborted connection 148 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:30:10 149 [Warning] Aborted connection 149 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:30:39 150 [Warning] Aborted connection 150 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:31:07 151 [Warning] Aborted connection 151 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:40:26 153 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 11:46:54 154 [Warning] Aborted connection 154 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 11:49:21 155 [Warning] Aborted connection 155 to db: 'joysis_ams' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2023-01-13 12:03:29 157 [ERROR] mysqld.exe: Incorrect information in file: '.\mysql\user.frm'
+2023-01-13 12:05:11 0 [Note] D:\applications\xampp\mysql\bin\mysqld.exe (initiated by: unknown): Normal shutdown
+2023-01-13 12:05:11 0 [Note] Event Scheduler: Purging the queue. 0 events
+2023-01-13 12:05:11 0 [Note] InnoDB: FTS optimize thread exiting.
+2023-01-13 12:05:11 0 [Note] InnoDB: Starting shutdown...
+2023-01-13 12:05:11 0 [Note] InnoDB: Dumping buffer pool(s) to D:\Applications\xampp\mysql\data\ib_buffer_pool
+2023-01-13 12:05:11 0 [Note] InnoDB: Instance 0, restricted to 250 pages due to innodb_buf_pool_dump_pct=25
+2023-01-13 12:05:11 0 [Note] InnoDB: Buffer pool(s) dump completed at 230113 12:05:11
+2023-01-13 12:05:12 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-01-13 12:05:12 0 [Note] InnoDB: Shutdown completed; log sequence number 547111; transaction id 1483
+2023-01-13 12:05:12 0 [Note] D:\applications\xampp\mysql\bin\mysqld.exe: Shutdown complete
+
